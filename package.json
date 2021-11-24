@@ -11,6 +11,7 @@
     "deploy": "vercel --prod"
   },
   "dependencies": {
+    "@formspree/react": "^2.2.4",
     "framer-motion": "^2.9.4",
     "next": "10.0.0",
     "next-compose-plugins": "^2.2.0",

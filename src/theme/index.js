@@ -316,6 +316,7 @@ export default {
       borderColor: "#ffffff",
       height: 60,
       "&:focus": {
+        backgroundColor: "#ffffff",
         borderColor: "#ffffff",
         boxShadow: (t) => `0 0 0 2px ${t.colors.primary}`,
         outline: "none",
@@ -325,6 +326,7 @@ export default {
       borderRadius: 8,
       borderColor: "#ffffff",
       "&:focus": {
+        backgroundColor: "#ffffff",
         borderColor: "#ffffff",
         boxShadow: (t) => `0 0 0 2px ${t.colors.primary}`,
         outline: "none",
