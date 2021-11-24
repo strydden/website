@@ -1,0 +1,14 @@
+{
+  "name": "STRYDDEN Technologies LLP",
+  "description": "STRYDDEN Technologies LLP",
+  "formation": {
+    "web": {
+      "quantity": 1
+    }
+  },
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    }
+  ]
+}
