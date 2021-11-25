@@ -15,7 +15,7 @@ import { useForm, ValidationError } from "@formspree/react";
 import { useState, useEffect } from "react";
 
 const data = {
-  title: "Do you have any question? Feel free to contact us",
+  title: "We'd love to help you start exceeding your business goals.",
 };
 
 const Contact = () => {

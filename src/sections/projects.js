@@ -4,50 +4,32 @@ import Masonry from "react-masonry-component";
 import ProjectTitle from "components/project-title";
 import ProjectCard from "components/project-card";
 
-import blogImage1 from "assets/blog-1-1.png";
-import blogImage2 from "assets/blog-1-2.png";
-import blogImage3 from "assets/blog-1-3.png";
-import blogImage4 from "assets/blog-1-4.png";
+import travalabWeb from "assets/travalabWeb.png";
+import travalabApp from "assets/travalabApp.png";
+import qrcty from "assets/qrcty.png";
 
 const BLOG_DATA = [
   {
-    image: blogImage1,
-    title: "How to work with prototype design with adobe xd featuring tools",
+    image: travalabWeb,
+    title: "Travalab Web App",
     description:
-      "The 2019 Innovation by Design Awards honor the designers and businesses solving the problems of today and tomorrow. It is one of the most sought-after design",
-    path: "/",
-    linkLabel: "Learn More",
+      "Travalab provides mobile phlebotomy services nationwide to patients within the comfort of their homes, offices, or health clinics. We are partnered with several speciality labs, research groups, and clinical trials teams. Our mission is to bridge phlebotomy needs with accessibility and convenience for all.",
+    linkLabel: "View",
+    path: "https://travalab.com/",
   },
   {
-    image: null,
-    title:
-      "Antibias receives honorable gift mention at Fast Company’s most Innovation by Design Awards",
-    description: null,
-    path: "/",
-    linkLabel: null,
-  },
-  {
-    image: blogImage3,
-    title: "Multiple task wireframing with team management perform better",
-    description: null,
-    path: "/",
-    linkLabel: null,
-  },
-  {
-    image: blogImage2,
-    title: "Multiple art board prototype with Figma",
+    image: travalabApp,
+    title: "Travalab Mobile App",
     description:
-      "Beyond launched antibias, a Chrome extension that replaces LinkedIn profile photos",
-    path: "/",
-    linkLabel: "Learn More",
+      "Travalab provides mobile phlebotomy services nationwide to patients within the comfort of their homes, offices, or health clinics. We are partnered with several speciality labs, research groups, and clinical trials teams. Our mission is to bridge phlebotomy needs with accessibility and convenience for all.",
+    path: "https://travalab.com/",
+    linkLabel: "View",
   },
   {
-    image: blogImage4,
-    title:
-      "Team presentation with latest user interface & experience reach more",
-    description: null,
-    path: "/",
-    linkLabel: null,
+    image: qrcty,
+    title: "QRCTY Mobile App",
+    description:
+      "QRCTY is a mobile application, which helps users to find nearest restaurants and pubs based on people density, also helps users to find business and activities.",
   },
 ];
 
@@ -59,7 +41,7 @@ const Projects = () => {
   return (
     <Box as="section" id="projects" sx={styles.projects}>
       <Container>
-        <ProjectTitle title="Projects that people love most" text="" />
+        <ProjectTitle title="Projects" text="" />
         <Box as={Masonry} options={masonryOptions} sx={styles.blogWrapper}>
           {BLOG_DATA.map(
             ({ image, title, description, path, linkLabel }, index) => (

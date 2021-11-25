@@ -12,37 +12,37 @@ import serviceImage6 from "assets/service-6.png";
 const SERVICES_DATA = [
   {
     image: serviceImage1,
-    text: "Get your info tests delivered at home collect a sample from the your progress tests.",
+    text: "",
     heading: "UI/UX",
     path: "#",
   },
   {
     image: serviceImage2,
-    text: "Get your info tests delivered at home collect a sample from the your progress tests.",
+    text: "",
     heading: "Web Design",
     path: "#",
   },
   {
     image: serviceImage3,
-    text: "Get your info tests delivered at home collect a sample from the your progress tests.",
+    text: "",
     heading: "Web Development",
     path: "#",
   },
   {
     image: serviceImage4,
-    text: "Get your info tests delivered at home collect a sample from the your progress tests.",
+    text: "",
     heading: "Mobile Application Development",
     path: "#",
   },
   {
-    image: serviceImage5,
-    text: "Get your info tests delivered at home collect a sample from the your progress tests.",
+    image: serviceImage6,
+    text: "",
     heading: "Game Development",
     path: "#",
   },
   {
-    image: serviceImage6,
-    text: "Get your info tests delivered at home collect a sample from the your progress tests.",
+    image: serviceImage5,
+    text: "",
     heading: "Cloud Engineering",
     path: "#",
   },
@@ -51,10 +51,7 @@ const Services = () => {
   return (
     <Box as="section" id="services" sx={styles.services}>
       <Container>
-        <BlockTitle
-          title="Our Services"
-          text=""
-        />
+        <BlockTitle title="Our Services" text="" />
         <Grid sx={styles.grid}>
           {SERVICES_DATA.map(({ image, text, heading, path }, index) => (
             <ServiceCard

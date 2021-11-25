@@ -122,7 +122,7 @@ export default {
     },
     heroPrimary: {
       color: "heading_secondary",
-      fontSize: ["34px", 10, 11, 12, 11, 12, 13, 14],
+      fontSize: ["34px", 10, 10, 10, 10, 11, 12, 13],
       lineHeight: [1.3, 1.25],
       fontWeight: "body",
       mb: [4, 5],

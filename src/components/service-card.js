@@ -22,6 +22,7 @@ const styles = {
     display: "flex",
     flexDirection: ["column", null, null, "row"],
     textAlign: ["center", null, null, "left"],
+    alignItems: "center",
   },
   image: {
     flexShrink: 0,

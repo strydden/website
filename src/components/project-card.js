@@ -23,8 +23,8 @@ const ProjectCard = ({ image, title, description, path, linkLabel }) => {
           <Link path={path}>{title}</Link>
         </Heading>
         {description !== null && <Text as="p">{description}</Text>}
-        {linkLabel !== null && (
-          <Link sx={styles.linkLabel} path={path}>
+        {linkLabel && (
+          <Link as="a" sx={styles.linkLabel} path={path} target="_blank">
             {linkLabel} <Image src={arrowAngle} alt="angle icon" />
           </Link>
         )}

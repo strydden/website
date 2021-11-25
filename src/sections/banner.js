@@ -9,13 +9,14 @@ export default function Banner() {
       <Container sx={styles.banner.container}>
         <Box sx={styles.banner.contentBox}>
           <Heading as="h1" variant="heroPrimary">
-            A Creative way to grow your Exciting Business model
+            Combining business intelligence and domain expertise to drive
+            transformation & change.
           </Heading>
-          <Text as="p" variant="heroSecondary">
+          {/* <Text as="p" variant="heroSecondary">
             Get your blood tests delivered at let home collect sample from the
             victory of the managements that supplies best design system
             guidelines ever.
-          </Text>
+          </Text> */}
         </Box>
         <Box sx={styles.banner.imageBox}>
           <Image src={BannerThumb} alt="banner" width="740" height="782" />

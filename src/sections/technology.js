@@ -22,6 +22,12 @@ import apple from "assets/apple.png";
 import android from "assets/android.png";
 import flutter from "assets/flutter.png";
 import aws from "assets/aws.png";
+import docker from "assets/docker.png";
+import github from "assets/github.png";
+import frontendTab from "assets/frontendTab.png";
+import backendTab from "assets/backendTab.png";
+import mobileTab from "assets/mobileTab.png";
+import devopsTab from "assets/devopsTab.png";
 
 const frontend = [
   {
@@ -56,10 +62,6 @@ const frontend = [
 
 const backend = [
   {
-    icon: python,
-    name: "Python",
-  },
-  {
     icon: ruby,
     name: "Ruby",
   },
@@ -78,6 +80,10 @@ const backend = [
   {
     icon: node,
     name: "Node Js",
+  },
+  {
+    icon: python,
+    name: "Python",
   },
 ];
 const mobile = [
@@ -103,6 +109,14 @@ const cloud = [
   {
     icon: aws,
     name: "AWS",
+  },
+  {
+    icon: docker,
+    name: "Docker",
+  },
+  {
+    icon: github,
+    name: "Github",
   },
 ];
 const Technology = () => {
@@ -146,28 +160,28 @@ const Technology = () => {
               onClick={() => handleTab("Frontend")}
               className={`${tab.active === "Frontend" ? "active" : ""}`}
             >
-              <AiFillDollarCircle />
+              <img src={frontendTab} />
               Frontend
             </Button>
             <Button
               onClick={() => handleTab("Backend")}
               className={`${tab.active === "Backend" ? "active" : ""}`}
             >
-              <FaCog />
+              <img src={backendTab} />
               Backend
             </Button>
             <Button
               onClick={() => handleTab("Mobile")}
               className={`${tab.active === "Mobile" ? "active" : ""}`}
             >
-              <AiFillPieChart />
+              <img src={mobileTab} />
               Mobile
             </Button>
             <Button
               onClick={() => handleTab("Devops")}
               className={`${tab.active === "Devops" ? "active" : ""}`}
             >
-              <FaBriefcase />
+              <img src={devopsTab} />
               Devops
             </Button>
           </Box>
@@ -305,12 +319,13 @@ const styles = {
       lineHeight: 1,
       position: "relative",
       transition: "all 500ms ease",
-      svg: {
+      img: {
         fontSize: ["18px", null, null, null, "30px"],
         color: "#ADBDD0",
-        opacity: 0.7,
         mr: "15px",
         transition: "all 500ms ease",
+        height: "auto",
+        width: ["30px", null, null, null, "40px"],
       },
       "&:hover, &.active": {
         backgroundColor: "rgba(0,0,0,0)",
