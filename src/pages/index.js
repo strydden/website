@@ -9,6 +9,7 @@ import Subscribe from 'sections/subscribe';
 import Testimonial from 'sections/testimonial';
 import Projects from "sections/projects";
 import Contact from "sections/contact";
+import Technology from "sections/technology";
 
 export default function IndexPage() {
   return (
@@ -19,8 +20,9 @@ export default function IndexPage() {
         />
         <Banner />
         <Services />
+        <Technology />
         <Projects />
-        <Testimonial />
+        {/* <Testimonial /> */}
         <Contact />
         {/* <Subscribe /> */}
       </Layout>

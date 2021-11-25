@@ -13,37 +13,37 @@ const SERVICES_DATA = [
   {
     image: serviceImage1,
     text: "Get your info tests delivered at home collect a sample from the your progress tests.",
-    heading: "3D modeling & art",
+    heading: "UI/UX",
     path: "#",
   },
   {
     image: serviceImage2,
     text: "Get your info tests delivered at home collect a sample from the your progress tests.",
-    heading: "Digital promotion",
+    heading: "Web Design",
     path: "#",
   },
   {
     image: serviceImage3,
     text: "Get your info tests delivered at home collect a sample from the your progress tests.",
-    heading: "Business Enterprise",
+    heading: "Web Development",
     path: "#",
   },
   {
     image: serviceImage4,
     text: "Get your info tests delivered at home collect a sample from the your progress tests.",
-    heading: "Marketing & advertising",
+    heading: "Mobile Application Development",
     path: "#",
   },
   {
     image: serviceImage5,
     text: "Get your info tests delivered at home collect a sample from the your progress tests.",
-    heading: "Ultimate development",
+    heading: "Game Development",
     path: "#",
   },
   {
     image: serviceImage6,
     text: "Get your info tests delivered at home collect a sample from the your progress tests.",
-    heading: "Online support",
+    heading: "Cloud Engineering",
     path: "#",
   },
 ];
@@ -52,8 +52,8 @@ const Services = () => {
     <Box as="section" id="services" sx={styles.services}>
       <Container>
         <BlockTitle
-          title="Quality Services"
-          text="Services are highlighted here"
+          title="Our Services"
+          text=""
         />
         <Grid sx={styles.grid}>
           {SERVICES_DATA.map(({ image, text, heading, path }, index) => (

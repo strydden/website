@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx, Container, Box } from 'theme-ui';
-import TextFeature from 'components/text-feature';
+import TextFeature from 'components/contact-text';
 import Image from 'components/image';
 import { IoIosCheckmarkCircle } from 'react-icons/io';
 

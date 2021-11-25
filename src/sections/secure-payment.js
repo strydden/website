@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui';
 import { Container, Box } from 'theme-ui';
-import TextFeature from 'components/text-feature';
+import TextFeature from 'components/contact-text';
 import Image from 'components/image';
 
 import PaymentThumb from 'assets/paymentThumb.png';

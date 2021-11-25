@@ -11,10 +11,10 @@ export default [
     path: "projects",
     label: "Projects",
   },
-  {
-    path: "testimonials",
-    label: "Testimonials",
-  },
+  // {
+  //   path: "testimonials",
+  //   label: "Testimonials",
+  // },
   {
     path: "contact",
     label: "Contact Us",

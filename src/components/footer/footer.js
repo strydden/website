@@ -8,7 +8,7 @@ export default function Footer() {
     <Box as="footer" sx={styles.footer}>
       <Container>
         <Flex sx={styles.footerInner}>
-          <Flex sx={styles.brand}>
+          {/* <Flex sx={styles.brand}>
             <Link
               path="/"
               sx={{
@@ -24,13 +24,28 @@ export default function Footer() {
               STRYDDEN
             </Link>
             <Text as="span">Technologies LLP</Text>
-          </Flex>
+          </Flex> */}
           <Flex sx={styles.copyright}>
-            <Text as="span">
-              &copy; Copyright {new Date().getFullYear()} by STRYDDEN
-            </Text>
+            <Text as="span">&copy; Copyright {new Date().getFullYear()}</Text>
+            <Link
+              path="/"
+              sx={{
+                variant: "links.logo",
+                display: "flex",
+                cursor: "pointer",
+                ml: 2,
+                mr: 2,
+                textDecoration: "none",
+                color: "#F94962",
+                fontWeight: "bold",
+                mt: [3, null, null, null, 0],
+              }}
+            >
+              STRYDDEN
+            </Link>
+            <Text as="span">Technologies LLP</Text>
           </Flex>
-          <Flex as="ul" sx={styles.footerNav}>
+          {/* <Flex as="ul" sx={styles.footerNav}>
             {menuItems?.map((item, index) => (
               <li key={index}>
                 <a
@@ -46,7 +61,7 @@ export default function Footer() {
                 </a>
               </li>
             ))}
-          </Flex>
+          </Flex> */}
         </Flex>
       </Container>
     </Box>
@@ -61,7 +76,7 @@ const styles = {
   },
   footerInner: {
     alignItems: "center",
-    justifyContent: "space-between",
+    justifyContent: "center",
     flexDirection: ["column", null, null, null, "row"],
   },
   brand: {
@@ -74,13 +89,13 @@ const styles = {
   },
   copyright: {
     alignItems: "center",
-    flexDirection: ["column", null, null, null, "row"],
+    flexDirection: ["column", "row", "row", "row", "row"],
     span: {
       color: "text_secondary",
       opacity: 0.7,
       fontSize: 1,
       lineHeight: "18px",
-      ml: [null, null, null, null, 3],
+      // ml: [null, null, null, null, 3],
       mt: [3, null, null, null, 0],
     },
   },

@@ -9,16 +9,13 @@ import {
   Button,
   Spinner,
 } from "theme-ui";
-import TextFeature from "components/text-feature";
+import ContactText from "components/contact-text";
 import PatternBG from "assets/patternBG.png";
 import { useForm, ValidationError } from "@formspree/react";
 import { useState, useEffect } from "react";
 
 const data = {
-  subTitle: "Core features",
-  title: "Smart Jackpots that you may love this anytime & anywhere",
-  description:
-    "Get your tests delivered at let home collect sample from the victory of the managements that supplies best design system guidelines ever.",
+  title: "Do you have any question? Feel free to contact us",
 };
 
 const Contact = () => {
@@ -39,11 +36,7 @@ const Contact = () => {
     <Box id="contact" as="section" sx={styles.workflow}>
       <Container sx={styles.containerBox}>
         <Box sx={styles.contentBox}>
-          <TextFeature
-            subTitle={data.subTitle}
-            title={data.title}
-            description={data.description}
-          />
+          <ContactText title={data.title} />
         </Box>
         <Box sx={styles.thumbnail}>
           {state.submitting ? (
