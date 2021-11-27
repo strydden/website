@@ -28,6 +28,13 @@ import frontendTab from "assets/frontendTab.png";
 import backendTab from "assets/backendTab.png";
 import mobileTab from "assets/mobileTab.png";
 import devopsTab from "assets/devopsTab.png";
+import terraform from "assets/terraform.png";
+import kubernetes from "assets/kubernetes.png";
+import ansible from "assets/ansible.png";
+import vmware from "assets/vmware.png";
+import cicd from "assets/cicd.png";
+import lambda from "assets/lambda.png";
+import monitoring from "assets/monitoring.png";
 
 const frontend = [
   {
@@ -113,6 +120,30 @@ const cloud = [
   {
     icon: docker,
     name: "Docker",
+  },
+  {
+    icon: ansible,
+    name: "Ansible",
+  },
+  {
+    icon: terraform,
+    name: "Terraform",
+  },
+  {
+    icon: kubernetes,
+    name: "Kubernetes",
+  },
+  {
+    icon: lambda,
+    name: "Lambda",
+  },
+  {
+    icon: vmware,
+    name: "WmWare",
+  },
+  {
+    icon: cicd,
+    name: "CI/CD",
   },
   {
     icon: github,
@@ -252,11 +283,13 @@ const Technology = () => {
               {cloud.map((item, index) => (
                 <li key={index}>
                   <Flex sx={styles.technologyListItem}>
-                    <img
-                      src={item.icon}
-                      key={index}
-                      sx={styles.technologyListIcon}
-                    />
+                    {item.icon && (
+                      <img
+                        src={item.icon}
+                        key={index}
+                        sx={styles.technologyListIcon}
+                      />
+                    )}
                     {item.name && (
                       <Text as="span" sx={styles.technologyListText}>
                         {item.name}

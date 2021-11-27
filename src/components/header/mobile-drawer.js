@@ -74,7 +74,7 @@ const MobileDrawer = () => {
             ))}
           </Box>
 
-          <Box sx={styles.menuFooter}>
+          {/* <Box sx={styles.menuFooter}>
             <Box sx={styles.social}>
               {social.map(({ path, icon }, i) => (
                 <Box as="span" key={i} sx={styles.social.icon}>
@@ -84,7 +84,7 @@ const MobileDrawer = () => {
                 </Box>
               ))}
             </Box>
-          </Box>
+          </Box> */}
         </Box>
       </Scrollbars>
     </Drawer>
