@@ -139,7 +139,7 @@ const cloud = [
   },
   {
     icon: vmware,
-    name: "WmWare",
+    name: "VMware",
   },
   {
     icon: cicd,

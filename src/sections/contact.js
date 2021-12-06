@@ -1,5 +1,3 @@
-/** @jsx jsx */
-import { jsx } from "theme-ui";
 import {
   Container,
   Box,
@@ -15,7 +13,14 @@ import { useForm, ValidationError } from "@formspree/react";
 import { useState, useEffect } from "react";
 
 const data = {
-  title: "We'd love to help you start exceeding your business goals.",
+  title: "We'd love to help you exceeding your business goals.",
+  subtitle:
+    "Get your blood tests delivered at home collect a sample from the your blood tests.",
+  address: `B01-403 To 406, 4th Floor, 3rd Eye Vision
+              Opp. Shivalik Plaza, IIM Road, Panjarapole
+              Ahmedabad, Gujarat 380009, India`,
+  mobile: "+91-9888888888",
+  email: "dixit@strydden.com",
 };
 
 const Contact = () => {
@@ -36,7 +41,13 @@ const Contact = () => {
     <Box id="contact" as="section" sx={styles.workflow}>
       <Container sx={styles.containerBox}>
         <Box sx={styles.contentBox}>
-          <ContactText title={data.title} />
+          <ContactText
+            title={data.title}
+            subtitle={data.subtitle}
+            address={data.address}
+            mobile={data.mobile}
+            email={data.email}
+          />
         </Box>
         <Box sx={styles.thumbnail}>
           {state.submitting ? (
@@ -114,15 +125,24 @@ const styles = {
   },
   containerBox: {
     display: "flex",
-    alignItems: "center",
-    justifyContent: "space-between",
+    alignItems: "flex-start",
+    justifyContent: [
+      "center",
+      "center",
+      "center",
+      "center",
+      "center",
+      "center",
+      "space-between",
+      "space-between",
+    ],
     flexWrap: ["wrap", null, null, "nowrap"],
     pb: [0, 7, 0, null, 7],
   },
   contentBox: {
     flexShrink: 0,
     px: [0, null, "30px", 0],
-    textAlign: ["center", null, null, "left"],
+    textAlign: ["left", null, null, "left"],
     width: ["100%", "80%", null, 340, 400, 430, null, 485],
     pb: ["50px", "60px", null, 0],
     mx: ["auto", null, null, 0],
