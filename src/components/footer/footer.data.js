@@ -1,6 +1,6 @@
 import { FaFacebook, FaTwitter, FaGithub, FaInstagram } from "react-icons/fa";
 
-export default [
+export  const data = [
   {
     path: "/",
     label: "Facebook",
@@ -26,3 +26,5 @@ export default [
     icon: <FaInstagram />,
   },
 ];
+
+export default data;

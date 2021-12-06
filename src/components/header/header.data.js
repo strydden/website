@@ -1,4 +1,4 @@
-export default [
+export const data = [
   {
     path: "home",
     label: "Home",
@@ -20,3 +20,5 @@ export default [
     label: "Contact Us",
   },
 ];
+
+export default data;

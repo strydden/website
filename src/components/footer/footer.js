@@ -1,8 +1,7 @@
-/** @jsx jsx */
-import { jsx, Box, Text, Flex, Container } from "theme-ui";
+import { Box, Text, Flex, Container } from "theme-ui";
 import { Link } from "components/link";
-import menuItems from "./footer.data";
-import CallToAction from "sections/call-to-action";
+// import menuItems from "./footer.data";
+// import CallToAction from "sections/call-to-action";
 export default function Footer() {
   return (
     <Box as="footer" sx={styles.footer}>

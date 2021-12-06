@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Box, Container, Button, Flex, Text } from "theme-ui";
-import { keyframes } from "@emotion/core";
+import { keyframes } from "@emotion/react";
 import BlockTitle from "components/block-title";
 import { AiFillDollarCircle, AiFillPieChart } from "react-icons/ai";
 import { FaBriefcase, FaCog } from "react-icons/fa";
@@ -139,7 +139,7 @@ const cloud = [
   },
   {
     icon: vmware,
-    name: "WmWare",
+    name: "VMware",
   },
   {
     icon: cicd,

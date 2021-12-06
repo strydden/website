@@ -1,6 +1,5 @@
-/** @jsx jsx */
-import { jsx, Container, Flex } from "theme-ui";
-import { keyframes } from "@emotion/core";
+import { Container, Flex } from "theme-ui";
+import { keyframes } from "@emotion/react";
 import { Link as ScrollLink } from "react-scroll";
 import { DrawerProvider } from "contexts/drawer/drawer.provider";
 import MobileDrawer from "./mobile-drawer";
