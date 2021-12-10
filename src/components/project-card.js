@@ -20,7 +20,9 @@ const ProjectCard = ({ image, title, description, path, linkLabel }) => {
 
       <Box sx={styles.content} className="blogContent">
         <Heading as="h3">
-          <Link path={path}>{title}</Link>
+          <Link as="a" rel="noreferrer" path={path} target="_blank">
+            {title}
+          </Link>
         </Heading>
         {description !== null && <Text as="p">{description}</Text>}
         {linkLabel && (
