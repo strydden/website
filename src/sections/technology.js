@@ -201,28 +201,28 @@ const Technology = () => {
               onClick={() => handleTab("Frontend")}
               className={`${tab.active === "Frontend" ? "active" : ""}`}
             >
-              <img src={frontendTab} />
+              <img src={frontendTab} alt="frontendTab" />
               Frontend
             </Button>
             <Button
               onClick={() => handleTab("Backend")}
               className={`${tab.active === "Backend" ? "active" : ""}`}
             >
-              <img src={backendTab} />
+              <img src={backendTab} alt="backendTab" />
               Backend
             </Button>
             <Button
               onClick={() => handleTab("Mobile")}
               className={`${tab.active === "Mobile" ? "active" : ""}`}
             >
-              <img src={mobileTab} />
+              <img src={mobileTab} alt="mobileTab" />
               Mobile
             </Button>
             <Button
               onClick={() => handleTab("Devops")}
               className={`${tab.active === "Devops" ? "active" : ""}`}
             >
-              <img src={devopsTab} />
+              <img src={devopsTab} alt="devopsTab" />
               Devops
             </Button>
           </Box>
@@ -237,6 +237,7 @@ const Technology = () => {
                       src={item.icon}
                       key={index}
                       sx={styles.technologyListIcon}
+                      alt={item.name}
                     />
                     {item.name && (
                       <Text as="span" sx={styles.technologyListText}>
@@ -257,6 +258,7 @@ const Technology = () => {
                       src={item.icon}
                       key={index}
                       sx={styles.technologyListIcon}
+                      alt={item.name}
                     />
                     {item.name && (
                       <Text as="span" sx={styles.technologyListText}>
@@ -277,6 +279,7 @@ const Technology = () => {
                       src={item.icon}
                       key={index}
                       sx={styles.technologyListIcon}
+                      alt={item.name}
                     />
                     {item.name && (
                       <Text as="span" sx={styles.technologyListText}>
@@ -298,6 +301,7 @@ const Technology = () => {
                         src={item.icon}
                         key={index}
                         sx={styles.technologyListIcon}
+                        alt={item.name}
                       />
                     )}
                     {item.name && (
