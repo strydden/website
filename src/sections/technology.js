@@ -37,6 +37,7 @@ import lambda from "assets/lambda.png";
 import mysql from "assets/mysql.png";
 import postgres from "assets/postgres.png";
 import monitoring from "assets/monitoring.png";
+import mongo from "assets/mongo.png";
 
 const frontend = [
   {
@@ -99,8 +100,8 @@ const backend = [
     name: "MySQL",
   },
   {
-    icon: postgres,
-    name: "PostgreSQL",
+    icon: mongo,
+    name: "MongoDB",
   },
 ];
 const mobile = [
