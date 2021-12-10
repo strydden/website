@@ -34,6 +34,8 @@ import ansible from "assets/ansible.png";
 import vmware from "assets/vmware.png";
 import cicd from "assets/cicd.png";
 import lambda from "assets/lambda.png";
+import mysql from "assets/mysql.png";
+import postgres from "assets/postgres.png";
 import monitoring from "assets/monitoring.png";
 
 const frontend = [
@@ -91,6 +93,14 @@ const backend = [
   {
     icon: python,
     name: "Python",
+  },
+  {
+    icon: mysql,
+    name: "MySQL",
+  },
+  {
+    icon: postgres,
+    name: "PostgreSQL",
   },
 ];
 const mobile = [
@@ -318,7 +328,7 @@ const fadeIn = keyframes`
 
 const styles = {
   technology: {
-    pt: ["80px", null, null, null, "80px", null, "100px"],
+    pt: ["80px", null, null, null, "80px", null, "150px"],
     py: [8, null, 9, null, null, 2],
   },
   container: {
@@ -358,7 +368,7 @@ const styles = {
         mr: "15px",
         transition: "all 500ms ease",
         height: "auto",
-        width: ["30px", null, null, null, "40px"],
+        width: ["30px", null, null, null, "30px"],
       },
       "&:hover, &.active": {
         backgroundColor: "rgba(0,0,0,0)",
@@ -408,19 +418,19 @@ const styles = {
   technologyList: {
     listStyle: "none",
     display: "flex",
-    // flexDirection: ["column", null, null, null, null, "row"],
     flexWrap: ["wrap", null, null, null, null, "noWrap"],
     li: {
-      pl: ["15px", null, null, null, "30px"],
+      pl: ["0px", null, null, null, "30px"],
     },
     "li > div": {
       alignItems: "center",
       flexDirection: "column",
+      p: ["20px", null, null, null, "20px"],
       pt: ["15px", null, null, null, "30px"],
     },
     img: {
       height: "auto",
-      width: "60px",
+      width: "48px",
     },
     span: {
       color: "text_secondary",
