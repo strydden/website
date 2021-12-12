@@ -8,18 +8,10 @@ async function getPost(slug) {
   return result.posts[0];
 }
 
-export async function getStaticProps({ params }) {
+export async function getServerSideProps({ params }) {
   const post = await getPost(params.slug);
   return {
     props: { post },
-    revalidate: 10,
-  };
-}
-
-export async function getStaticPaths() {
-  return {
-    paths: [{ params: { slug: "the-editor" } }],
-    fallback: true,
   };
 }
 
