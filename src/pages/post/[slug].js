@@ -8,10 +8,30 @@ async function getPost(slug) {
   return result.posts[0];
 }
 
-export async function getServerSideProps({ params }) {
+async function getAllPosts() {
+  const result = await fetch(
+    `${BLOG_URL}/ghost/api/v3/content/posts/?key=${CONTENT_API_KEY}`
+  ).then((res) => res.json());
+  return result.posts;
+}
+
+export async function getStaticProps({ params }) {
   const post = await getPost(params.slug);
   return {
     props: { post },
+  };
+}
+
+export async function getStaticPaths() {
+  const allPosts = await getAllPosts();
+  const paths = allPosts.map((post) => ({
+    params: {
+      slug: post.slug,
+    },
+  }));
+  return {
+    paths,
+    fallback: true,
   };
 }
 
