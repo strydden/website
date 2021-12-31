@@ -51,7 +51,7 @@ const Services = () => {
   return (
     <Box as="section" id="services" sx={styles.services}>
       <Container>
-        <BlockTitle title="Our Services" text="" />
+        <BlockTitle title="Services" text="" />
         <Grid sx={styles.grid}>
           {SERVICES_DATA.map(({ image, text, heading, path }, index) => (
             <ServiceCard
