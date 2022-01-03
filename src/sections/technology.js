@@ -2,9 +2,6 @@ import React, { useState } from "react";
 import { Box, Container, Button, Flex, Text } from "theme-ui";
 import { keyframes } from "@emotion/core";
 import BlockTitle from "components/block-title";
-import { AiFillDollarCircle, AiFillPieChart } from "react-icons/ai";
-import { FaBriefcase, FaCog } from "react-icons/fa";
-import dotPattern from "assets/dot-pattern.svg";
 import react from "assets/react.png";
 import js from "assets/js.png";
 import reactNative from "assets/react-native.png";
@@ -28,6 +25,7 @@ import frontendTab from "assets/frontendTab.png";
 import backendTab from "assets/backendTab.png";
 import mobileTab from "assets/mobileTab.png";
 import devopsTab from "assets/devopsTab.png";
+import settingsTab from "assets/settingsTab.png";
 import terraform from "assets/terraform.png";
 import kubernetes from "assets/kubernetes.png";
 import ansible from "assets/ansible.png";
@@ -38,6 +36,8 @@ import mysql from "assets/mysql.png";
 import postgres from "assets/postgres.png";
 import monitoring from "assets/monitoring.png";
 import mongo from "assets/mongo.png";
+import selenium from "assets/selenium.png";
+import appium from "assets/appium.png";
 
 const frontend = [
   {
@@ -94,6 +94,10 @@ const backend = [
   {
     icon: python,
     name: "Python",
+  },
+  {
+    icon: postgres,
+    name: "PostgreSQL",
   },
   {
     icon: mysql,
@@ -161,6 +165,17 @@ const cloud = [
     name: "Github",
   },
 ];
+const tools = [
+  {
+    icon: selenium,
+    name: "Selenium",
+  },
+  {
+    icon: appium,
+    name: "Appium",
+  },
+];
+
 const Technology = () => {
   const [tab, setTab] = useState({
     active: "Frontend",
@@ -189,6 +204,12 @@ const Technology = () => {
       setTab({
         ...tab,
         active: "Devops",
+      });
+    }
+    if (tab === "Tools") {
+      setTab({
+        ...tab,
+        active: "Tools",
       });
     }
   };
@@ -225,6 +246,13 @@ const Technology = () => {
             >
               <img src={devopsTab} alt="devopsTab" />
               Devops
+            </Button>
+            <Button
+              onClick={() => handleTab("Tools")}
+              className={`${tab.active === "Tools" ? "active" : ""}`}
+            >
+              <img src={settingsTab} alt="toolsTab" />
+              Tools
             </Button>
           </Box>
         </Box>
@@ -315,6 +343,29 @@ const Technology = () => {
               ))}
             </Flex>
           )}
+          {tab.active === "Tools" && (
+            <Flex as="ul" sx={styles.technologyList}>
+              {tools.map((item, index) => (
+                <li key={index}>
+                  <Flex sx={styles.technologyListItem}>
+                    {item.icon && (
+                      <img
+                        src={item.icon}
+                        key={index}
+                        sx={styles.technologyListIcon}
+                        alt={item.name}
+                      />
+                    )}
+                    {item.name && (
+                      <Text as="span" sx={styles.technologyListText}>
+                        {item.name}
+                      </Text>
+                    )}
+                  </Flex>
+                </li>
+              ))}
+            </Flex>
+          )}
         </Box>
       </Container>
     </Box>
@@ -360,12 +411,12 @@ const styles = {
       justifyContent: "center",
       flexDirection: "column",
       pb: ["15px", null, null, null, "20px"],
-      px: ["8px", "20px", "30px", "30px", "30px"],
+      px: ["6px", "20px", "30px", "30px", "30px"],
       flexShrink: "0",
       border: 0,
       backgroundColor: "rgba(0,0,0,0)",
       color: "#0F2137",
-      fontSize: ["14px", null, null, null, "18px"],
+      fontSize: ["12px", null, null, null, "14px"],
       fontWeight: 500,
       lineHeight: 1,
       position: "relative",
@@ -439,7 +490,7 @@ const styles = {
     },
     img: {
       height: "auto",
-      width: "48px",
+      width: ["30px", null, null, null, "40px"],
     },
     span: {
       color: "text_secondary",
