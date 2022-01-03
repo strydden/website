@@ -124,6 +124,7 @@ const styles = {
       lineHeight: "1.2",
       transition: "all 0.15s",
       color: "heading",
+      textTransform: "uppercase",
       "&.active": {
         color: "primary",
       },

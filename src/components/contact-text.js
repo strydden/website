@@ -80,6 +80,7 @@ const styles = {
       fontWeight: "500",
       fontFamily: "heading",
       letterSpacing: "1",
+      textTransform: "uppercase",
       px: [0, null, 7, 0],
     },
     value: {

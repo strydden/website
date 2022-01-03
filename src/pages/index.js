@@ -39,7 +39,7 @@ export default function IndexPage({ posts }) {
         <Technology />
         <Projects />
         {/* <Testimonial /> */}
-        <Blogs posts={posts} />
+        {/* <Blogs posts={posts} /> */}
         <Contact />
         {/* <Subscribe /> */}
       </Layout>

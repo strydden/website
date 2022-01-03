@@ -195,7 +195,7 @@ const Technology = () => {
   return (
     <Box as="section" sx={styles.technology} id="technology">
       <Container sx={styles.container}>
-        <BlockTitle title="Our Technology Stack" text="" />
+        <BlockTitle title="Technology Stack" text="" />
         <Box sx={styles.tabButtonTopWrapper}>
           <Box sx={styles.tabButtonWrapper}>
             <Button
@@ -346,18 +346,21 @@ const styles = {
     overflowX: ["auto", null, null, null, null, "inherit"],
   },
   tabButtonWrapper: {
-    width: ["700px", null, null, null, null, "100%"],
+    width: "100%",
     mx: ["auto", null, null, null, null, "0"],
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
+    flexWrap: "wrap",
     borderBottom: "1px solid rgba(1,7,13,.1)",
     mb: "35px",
     button: {
       display: "flex",
       alignItems: "center",
-      pb: ["15px", null, null, null, "35px"],
-      px: ["15px", null, null, null, "30px"],
+      justifyContent: "center",
+      flexDirection: "column",
+      pb: ["15px", null, null, null, "20px"],
+      px: ["8px", "20px", "30px", "30px", "30px"],
       flexShrink: "0",
       border: 0,
       backgroundColor: "rgba(0,0,0,0)",
@@ -370,7 +373,7 @@ const styles = {
       img: {
         fontSize: ["18px", null, null, null, "30px"],
         color: "#ADBDD0",
-        mr: "15px",
+        mb: "0.5rem",
         transition: "all 500ms ease",
         height: "auto",
         width: ["30px", null, null, null, "30px"],
@@ -421,6 +424,7 @@ const styles = {
     },
   },
   technologyList: {
+    p: "0",
     listStyle: "none",
     display: "flex",
     flexWrap: ["wrap", null, null, null, null, "noWrap"],
