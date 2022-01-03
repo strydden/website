@@ -143,6 +143,7 @@ const styles = {
       cursor: "pointer",
       borderBottom: "1px solid #e8e5e5",
       transition: "all 0.25s",
+      textTransform: "uppercase",
       "&:hover": {
         color: "primary",
       },
