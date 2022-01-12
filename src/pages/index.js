@@ -29,20 +29,18 @@ export async function getStaticProps() {
   };
 }
 
-export default function IndexPage({ posts }) {
+export default function IndexPage() {
   return (
-    <ThemeProvider theme={theme}>
-      <Layout>
-        <SEO title="STRYDDEN Technologies LLP" />
-        <Banner />
-        <Services />
-        <Technology />
-        <Projects />
-        {/* <Testimonial /> */}
-        {/* <Blogs posts={posts} /> */}
-        <Contact />
-        {/* <Subscribe /> */}
-      </Layout>
-    </ThemeProvider>
+    <Layout>
+      <SEO title="STRYDDEN Technologies LLP" />
+      <Banner />
+      <Services />
+      <Technology />
+      <Projects />
+      {/* <Testimonial /> */}
+      {/* <Blogs posts={posts} /> */}
+      <Contact />
+      {/* <Subscribe /> */}
+    </Layout>
   );
 }

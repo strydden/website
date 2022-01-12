@@ -11,7 +11,9 @@
     "deploy": "vercel --prod"
   },
   "dependencies": {
+    "@emotion/react": "^11.7.1",
     "@formspree/react": "^2.2.4",
+    "date-fns": "^2.27.0",
     "framer-motion": "^2.9.4",
     "next": "10.0.0",
     "next-compose-plugins": "^2.2.0",
@@ -22,6 +24,7 @@
     "react-dom": "16.13.1",
     "react-ga": "^3.2.0",
     "react-icons": "^3.10.0",
+    "react-id-swiper": "^4.0.0",
     "react-masonry-component": "^6.3.0",
     "react-multi-carousel": "^2.6.5",
     "react-scroll": "^1.8.0",
@@ -29,7 +32,8 @@
     "theme-ui": "^0.3.1",
     "typeface-bree-serif": "^1.1.13",
     "typeface-dm-sans": "^1.1.13",
-    "typeface-roboto-slab": "^1.1.13"
+    "typeface-roboto-slab": "^1.1.13",
+    "swiper": "^6.3.1"
   },
   "devDependencies": {
     "imagemin-mozjpeg": "^9.0.0",

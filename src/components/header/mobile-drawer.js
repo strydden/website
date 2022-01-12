@@ -4,7 +4,7 @@ import { Scrollbars } from "react-custom-scrollbars";
 import Drawer from "components/drawer";
 import { DrawerContext } from "../../contexts/drawer/drawer.context";
 import { IoMdClose, IoMdMenu } from "react-icons/io";
-import { Link } from "react-scroll";
+import { useRouter } from "next/router";
 import {
   FaFacebookF,
   FaTwitter,
@@ -12,6 +12,7 @@ import {
   FaInstagram,
 } from "react-icons/fa";
 import menuItems from "./header.data";
+import { NavLink } from "components/link";
 
 const social = [
   {
@@ -34,6 +35,7 @@ const social = [
 
 const MobileDrawer = () => {
   const { state, dispatch } = useContext(DrawerContext);
+  const router = useRouter();
 
   // Toggle drawer
   const toggleHandler = React.useCallback(() => {
@@ -59,18 +61,13 @@ const MobileDrawer = () => {
       <Scrollbars autoHide>
         <Box sx={styles.content}>
           <Box sx={styles.menu}>
-            {menuItems.map(({ path, label }, i) => (
-              <Link
-                activeClass="active"
-                to={path}
-                spy={true}
-                smooth={true}
-                offset={-70}
-                duration={500}
-                key={i}
-              >
-                {label}
-              </Link>
+            {menuItems.map(({ path, label }, index) => (
+              <NavLink
+                href={path}
+                label={label}
+                key={index}
+                activeClass={router.pathname === path}
+              />
             ))}
           </Box>
 

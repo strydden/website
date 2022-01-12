@@ -1,13 +1,17 @@
 /** @jsx jsx */
-import { jsx, NavLink as MenuLink, Link as A } from 'theme-ui';
-import NextLink from 'next/link';
-export function NavLink({ path, label, children, ...rest }) {
+import { jsx, Link as A } from "theme-ui";
+import NextLink from "next/link";
+
+export const NavLink = ({ href, label, activeClass, ...rest }) => {
   return (
-    <NextLink href={path}>
-      <MenuLink {...rest}>{children ? children : label}</MenuLink>
+    <NextLink href={href}>
+      <A {...rest} className={activeClass ? "active" : ""}>
+        {label}{" "}
+      </A>
     </NextLink>
   );
-}
+};
+
 export function Link({ path, label, children, ...rest }) {
   return (
     <A {...rest} href={path}>

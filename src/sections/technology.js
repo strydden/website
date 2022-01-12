@@ -384,8 +384,7 @@ const fadeIn = keyframes`
 
 const styles = {
   technology: {
-    pt: ["80px", null, null, null, "80px", null, "150px"],
-    py: [8, null, 9, null, null, 2],
+    py: "100px",
   },
   container: {
     position: "relative",
