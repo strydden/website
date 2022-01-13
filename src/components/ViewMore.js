@@ -29,7 +29,7 @@ const styles = {
   viewMore: {
     color: "#3183FF",
     cursor: "pointer",
-    fontSize: [1, null, null, "14px"],
+    fontSize: [1, null, null, "16px"],
     fontWeight: 500,
     display: "inline-flex",
     alignItems: "center",

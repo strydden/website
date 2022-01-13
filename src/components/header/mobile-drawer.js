@@ -66,7 +66,10 @@ const MobileDrawer = () => {
                 href={path}
                 label={label}
                 key={index}
-                activeClass={router.pathname === path}
+                activeClass={
+                  router.pathname === path ||
+                  router.asPath.split("/")[1] === path.split("/")[1]
+                }
               />
             ))}
           </Box>
