@@ -337,7 +337,15 @@ export default {
   badges: {
     primary: {
       color: "background",
-      bg: "#28A5FF",
+      bg: "primary",
+      borderRadius: 30,
+      p: "3px 11px",
+      fontSize: 1,
+      letterSpacing: "-0.5px",
+    },
+    secondary: {
+      color: "heading",
+      bg: "border_color",
       borderRadius: 30,
       p: "3px 11px",
       fontSize: 1,

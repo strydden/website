@@ -5,7 +5,7 @@ const PageTitle = ({ title, text }) => {
   return (
     <Box sx={styles.pageTitle} className="pageTitle">
       <Heading as="h3">{title}</Heading>
-      <Text as="p">{text}</Text>
+      {text && <Text as="p">{text}</Text>}
     </Box>
   );
 };
