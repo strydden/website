@@ -14,7 +14,7 @@ export default function ContactText({
           <Heading as="h2" sx={styles.wrapper.title}>
             {title}
           </Heading>
-          <Text sx={styles.wrapper.subTitle}>{subtitle}</Text>
+          {subtitle && <Text sx={styles.wrapper.subTitle}>{subtitle}</Text>}
         </Box>
         <Box sx={styles.box}>
           <Heading as="h6" sx={styles.wrapper.label}>
@@ -22,12 +22,14 @@ export default function ContactText({
           </Heading>
           <Text sx={styles.wrapper.value}>{address}</Text>
         </Box>
-        <Box sx={styles.box}>
-          <Heading as="h6" sx={styles.wrapper.label}>
-            Mobile
-          </Heading>
-          <Text sx={styles.wrapper.value}>{mobile}</Text>
-        </Box>
+        {mobile && (
+          <Box sx={styles.box}>
+            <Heading as="h6" sx={styles.wrapper.label}>
+              Mobile
+            </Heading>
+            <Text sx={styles.wrapper.value}>{mobile}</Text>
+          </Box>
+        )}
         <Box sx={styles.box}>
           <Heading as="h6" sx={styles.wrapper.label}>
             Email

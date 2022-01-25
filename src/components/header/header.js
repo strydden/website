@@ -128,11 +128,29 @@ const styles = {
       color: "heading",
       textTransform: "uppercase",
       fontWeight: "bold",
+      position: "relative",
       "&:hover": {
-        color: "#DB1F26",
+        color: "#184CA1",
+        "&::before": {
+          transform: "scaleX(1)",
+        },
       },
       "&.active": {
-        color: "#DB1F26",
+        color: "#184CA1",
+        "&::before": {
+          transform: "scaleX(1)",
+        },
+      },
+      "&::before": {
+        content: "''",
+        position: "absolute",
+        left: 0,
+        bottom: "-1rem",
+        width: "100%",
+        height: "2px",
+        background: "#184CA1",
+        transform: "scaleX(0)",
+        transition: "transform 500ms ease",
       },
     },
   },

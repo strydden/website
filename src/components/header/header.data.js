@@ -11,8 +11,8 @@ export default [
     path: "/projects",
     label: "Projects",
   },
-  {
-    path: "/careers",
-    label: "Careers",
-  },
+  // {
+  //   path: "/careers",
+  //   label: "Careers",
+  // },
 ];

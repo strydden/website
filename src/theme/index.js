@@ -1,5 +1,4 @@
 export default {
-  // example colors with dark mode
   colors: {
     text: "#343D48", // body color and primary color
     text_secondary: "#02073E", // secondary body color
@@ -30,15 +29,14 @@ export default {
     "1620px",
   ],
   fonts: {
-    body: "'DM Sans', sans-serif",
-    heading: "'Bree Serif', serif",
-    special: "'Roboto Slab', serif",
+    body: "'Poppins', sans-serif;",
+    heading: "'Poppins', sans-serif",
   },
   fontSizes: [12, 15, 16, 18, 20, 22, 24, 28, 32, 36, 42, 48, 52, 56, 62],
   fontWeights: {
     body: "normal",
-    heading: 500,
-    bold: 700,
+    heading: 600,
+    bold: 400,
   },
   lineHeights: {
     body: 1.9,
@@ -119,7 +117,7 @@ export default {
       color: "heading_secondary",
       fontSize: ["34px", 10, 10, 10, 10, 11, 12, 13],
       lineHeight: [1.3, 1.25],
-      fontWeight: "body",
+      fontWeight: "heading",
       mb: [4, 5],
       px: [0, 3, 6, 4, 0],
     },
@@ -200,7 +198,7 @@ export default {
       padding: ["10px 15px", "13px 30px"],
       fontFamily: "body",
       cursor: "pointer",
-      lineHeight: 1.2,
+      lineHeight: 1,
       transition: "all 0.25s",
       fontWeight: 500,
       "&:focus": {
@@ -217,15 +215,15 @@ export default {
     },
     whiteButton: {
       variant: "buttons.defaultBtn",
-      color: "heading_secondary",
-      padding: ["15px 20px", null, "17px 20px 16px", null, "20px 30px"],
+      color: "#05182C",
+      padding: ["15px 20px", null, "15px 20px 16px", null, "15px 30px"],
       bg: "white",
       fontWeight: "bold",
       letterSpacing: "1px",
       transition: "all 0.35s",
       fontSize: [0, "13px", null, null, 1],
       "&:hover": {
-        backgroundColor: "primary",
+        backgroundColor: "#05182C",
         color: "white",
         border: "1px solid white",
       },
