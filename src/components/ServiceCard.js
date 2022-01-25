@@ -64,5 +64,9 @@ const styles = {
     a: {
       mt: [2, null, null, null, 6],
     },
+    img: {
+      width: "84px",
+      height: "auto",
+    },
   },
 };
