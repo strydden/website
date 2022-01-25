@@ -14,8 +14,7 @@ import { useState, useEffect } from "react";
 
 const data = {
   title: "We'd love to help you exceeding your business goals.",
-  subtitle:
-    "Get your blood tests delivered at home collect a sample from the your blood tests.",
+  subtitle: "Drop your inquiry here, and our experts will get back to you.",
   address: `B01-403 To 406, 4th Floor, 3rd Eye Vision
               Opp. Shivalik Plaza, IIM Road, Panjarapole
               Ahmedabad, Gujarat 380009, India`,

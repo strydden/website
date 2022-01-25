@@ -11,7 +11,8 @@ const ServiceCard = ({ data, ...props }) => {
       </Box>
       <Box>
         <Heading as="h4">{data.title}</Heading>
-        {/* <Text as="p">{data.desc1}</Text> */}
+        <Text as="p">{data.homePageDesc1}</Text>
+        <Text as="p">{data.homePageDesc2}</Text>
         {data.path && <ViewMore path={data.path} />}
       </Box>
     </Box>

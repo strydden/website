@@ -139,7 +139,7 @@ const styles = {
     mt: "1rem",
   },
   linkLabel: {
-    color: "#3183FF",
+    color: "#184CA1",
     cursor: "pointer",
     fontSize: [1, null, null, "15px"],
     fontWeight: 500,

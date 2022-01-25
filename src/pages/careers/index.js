@@ -81,7 +81,10 @@ const Careers = () => {
   return (
     <Layout>
       <Container>
-        <PageTitle title="Careers at Strydden" />
+        <PageTitle
+          title="Careers at Strydden"
+          text="Join Strydden to give your career a big boost and join hands with a young, dynamic team."
+        />
         <Text
           sx={{
             fontSize: [4, 5, 6, null, 7],

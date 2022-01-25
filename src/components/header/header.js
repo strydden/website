@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx, Container, Flex } from "theme-ui";
+import { jsx, Container, Flex, Image } from "theme-ui";
 import { keyframes } from "@emotion/core";
 import { DrawerProvider } from "contexts/drawer/drawer.provider";
 import MobileDrawer from "./mobile-drawer";
@@ -7,6 +7,7 @@ import menuItems from "./header.data";
 import { Link, NavLink } from "components/link";
 import Divider from "assets/divider.svg";
 import { useRouter } from "next/router";
+import logo from "assets/logo.png";
 
 const Header = ({ className }) => {
   const router = useRouter();
@@ -26,7 +27,7 @@ const Header = ({ className }) => {
               fontWeight: "bold",
             }}
           >
-            STRYDDEN
+            <Image sx={styles.logo} src={logo} alt="logo" />
           </Link>
           <Flex as="nav" sx={styles.nav}>
             {menuItems.map(({ path, label }, index) => (
@@ -126,9 +127,17 @@ const styles = {
       transition: "all 0.15s",
       color: "heading",
       textTransform: "uppercase",
+      fontWeight: "bold",
+      "&:hover": {
+        color: "#DB1F26",
+      },
       "&.active": {
-        color: "primary",
+        color: "#DB1F26",
       },
     },
+  },
+  logo: {
+    height: "auto",
+    width: "160px",
   },
 };

@@ -31,11 +31,13 @@ const Service = ({ data, backgroundColor, flexDirection }) => {
             <Text as="p" sx={styles.desc1}>
               {data.desc1}
             </Text>
-            {data.desc2 && (
-              <Text as="p" sx={styles.desc2}>
-                {data.desc2}
-              </Text>
-            )}
+            <Box sx={styles.desc2Box}>
+              {data.desc2 && (
+                <Text as="p" sx={styles.desc2}>
+                  {data.desc2}
+                </Text>
+              )}
+            </Box>
 
             {data.subServicesList && (
               <Grid sx={styles.list} as="ul">
@@ -102,6 +104,8 @@ const styles = {
     lineHeight: [1.86, null, null, null, 1.86, 2.25],
     maxWidth: 470,
     m: [null, null, null, "20px auto 0", "15px 0 0", null, "unset"],
+  },
+  desc2Box: {
     mt: "1rem",
   },
   list: {

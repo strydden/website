@@ -57,7 +57,7 @@ const styles = {
     },
     title: {
       fontSize: [6, 7, 8, null, 9, null, 10],
-      color: "heading",
+      color: "#FFFFFF",
       lineHeight: [1.4, 1.45],
       fontWeight: "body",
       fontFamily: "heading",
@@ -75,20 +75,21 @@ const styles = {
     },
     label: {
       fontSize: [2, 3, 3, null, null, null, 4],
-      color: "heading",
+      color: "#FFFFFF",
       lineHeight: [1.4, 1.45],
       fontWeight: "500",
       fontFamily: "heading",
       letterSpacing: "1",
       textTransform: "uppercase",
       px: [0, null, 7, 0],
+      opacity: 0.75,
     },
     value: {
       fontSize: 1,
       fontWeight: 400,
       lineHeight: [1.85, null, null, 1.9, 2],
       color: "white",
-      opacity: 0.75,
+
       pr: [0, null, null, null, null, 5],
     },
   },

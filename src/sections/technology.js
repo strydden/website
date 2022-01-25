@@ -216,7 +216,10 @@ const Technology = () => {
   return (
     <Box as="section" sx={styles.technology} id="technology">
       <Container sx={styles.container}>
-        <BlockTitle title="Technology Stack" text="" />
+        <BlockTitle
+          title="Technology Stack"
+          text="At Strydden, we use some of the most advanced tools, technologies, and processes to build state-of-the-art tech products for you."
+        />
         <Box sx={styles.tabButtonTopWrapper}>
           <Box sx={styles.tabButtonWrapper}>
             <Button
@@ -414,7 +417,7 @@ const styles = {
       flexShrink: "0",
       border: 0,
       backgroundColor: "rgba(0,0,0,0)",
-      color: "#0F2137",
+      color: "primary",
       fontSize: ["12px", null, null, null, "14px"],
       fontWeight: 500,
       lineHeight: 1,
@@ -422,7 +425,7 @@ const styles = {
       transition: "all 500ms ease",
       img: {
         fontSize: ["18px", null, null, null, "30px"],
-        color: "#ADBDD0",
+        color: "red",
         mb: "0.5rem",
         transition: "all 500ms ease",
         height: "auto",
@@ -430,9 +433,9 @@ const styles = {
       },
       "&:hover, &.active": {
         backgroundColor: "rgba(0,0,0,0)",
-        color: "#0F2137",
+        color: "primary",
         svg: {
-          color: "#0F2137",
+          color: "primary",
           opacity: 1,
         },
         "&::before": {
@@ -443,7 +446,7 @@ const styles = {
         content: "''",
         position: "absolute",
         bottom: "-2px",
-        backgroundColor: "#0F2137",
+        backgroundColor: "primary",
         left: 0,
         width: "100%",
         height: "3px",
@@ -492,7 +495,7 @@ const styles = {
       width: ["30px", null, null, null, "40px"],
     },
     span: {
-      color: "text_secondary",
+      color: "primary",
       fontSize: 1,
       fontWeight: "500",
       lineHeight: "18px",

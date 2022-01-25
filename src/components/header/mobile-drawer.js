@@ -137,18 +137,18 @@ const styles = {
     flexDirection: "column",
     a: {
       fontSize: "16px",
-      fontWeight: "500",
-      color: "text_white",
+      fontWeight: "bold",
+      color: "heading",
       py: "15px",
       cursor: "pointer",
       borderBottom: "1px solid #e8e5e5",
       transition: "all 0.25s",
       textTransform: "uppercase",
       "&:hover": {
-        color: "primary",
+        color: "#DB1F26",
       },
       "&.active": {
-        color: "primary",
+        color: "#DB1F26",
       },
     },
   },
