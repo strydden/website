@@ -1,14 +1,16 @@
 /** @jsx jsx */
-import { jsx, Container, Flex } from "theme-ui";
+import { jsx, Container, Flex, Image } from "theme-ui";
 import { keyframes } from "@emotion/core";
-import { Link as ScrollLink } from "react-scroll";
 import { DrawerProvider } from "contexts/drawer/drawer.provider";
 import MobileDrawer from "./mobile-drawer";
 import menuItems from "./header.data";
-import { Link } from "components/link";
+import { Link, NavLink } from "components/link";
 import Divider from "assets/divider.svg";
+import { useRouter } from "next/router";
+import logo from "assets/logo.png";
 
-export default function Header({ className }) {
+const Header = ({ className }) => {
+  const router = useRouter();
   return (
     <DrawerProvider>
       <header sx={styles.header} className={className} id="header">
@@ -25,21 +27,19 @@ export default function Header({ className }) {
               fontWeight: "bold",
             }}
           >
-            STRYDDEN
+            <Image sx={styles.logo} src={logo} alt="logo" />
           </Link>
           <Flex as="nav" sx={styles.nav}>
-            {menuItems.map(({ path, label }, i) => (
-              <ScrollLink
-                activeClass="active"
-                to={path}
-                spy={true}
-                smooth={true}
-                offset={-70}
-                duration={500}
-                key={i}
-              >
-                {label}
-              </ScrollLink>
+            {menuItems.map(({ path, label }, index) => (
+              <NavLink
+                href={path}
+                label={label}
+                key={index}
+                activeClass={
+                  router.pathname === path ||
+                  router.asPath.split("/")[1] === path.split("/")[1]
+                }
+              />
             ))}
           </Flex>
           <MobileDrawer />
@@ -47,7 +47,9 @@ export default function Header({ className }) {
       </header>
     </DrawerProvider>
   );
-}
+};
+
+export default Header;
 
 const positionAnim = keyframes`
   from {
@@ -125,9 +127,17 @@ const styles = {
       transition: "all 0.15s",
       color: "heading",
       textTransform: "uppercase",
+      fontWeight: "bold",
+      "&:hover": {
+        color: "#DB1F26",
+      },
       "&.active": {
-        color: "primary",
+        color: "#DB1F26",
       },
     },
+  },
+  logo: {
+    height: "auto",
+    width: "160px",
   },
 };

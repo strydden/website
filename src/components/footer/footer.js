@@ -36,7 +36,7 @@ export default function Footer() {
                 ml: 2,
                 mr: 2,
                 textDecoration: "none",
-                color: "#F94962",
+                color: "primary",
                 fontWeight: "bold",
                 mt: [3, null, null, null, 0],
               }}

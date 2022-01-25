@@ -1,60 +1,84 @@
-import React from "react";
 import { Container, Box } from "theme-ui";
-import Masonry from "react-masonry-component";
 import ProjectTitle from "components/project-title";
-import ProjectCard from "components/project-card";
-
-import travalabWeb from "assets/travalabWeb.png";
-import travalabApp from "assets/travalabApp.png";
-import qrcty from "assets/qrcty.png";
-
-const BLOG_DATA = [
-  {
-    image: travalabWeb,
-    title: "Travalab Web App",
-    description:
-      "Travalab provides mobile phlebotomy services nationwide to patients within the comfort of their homes, offices, or health clinics. We are partnered with several speciality labs, research groups, and clinical trials teams. Our mission is to bridge phlebotomy needs with accessibility and convenience for all.",
-    linkLabel: "View",
-    path: "https://travalab.com/",
-  },
-  {
-    image: travalabApp,
-    title: "Travalab Mobile App",
-    description:
-      "Travalab provides mobile phlebotomy services nationwide to patients within the comfort of their homes, offices, or health clinics. We are partnered with several speciality labs, research groups, and clinical trials teams. Our mission is to bridge phlebotomy needs with accessibility and convenience for all.",
-    path: "https://travalab.com/",
-    linkLabel: "View",
-  },
-  {
-    image: qrcty,
-    title: "QRCTY Mobile App",
-    description:
-      "QRCTY is a mobile application, which helps users to find nearest restaurants and pubs based on people density, also helps users to find business and activities.",
-  },
-];
-
-const masonryOptions = {
-  transitionDuration: 0,
-};
+import React, { useRef } from "react";
+import Swiper from "react-id-swiper";
+import ProjectCard from "components/ProjectCard";
+import { FaLongArrowAltLeft, FaLongArrowAltRight } from "react-icons/fa";
+import { projects } from "constants/projects";
 
 const Projects = () => {
+  const ref = useRef(null);
+  const goNext = () => {
+    if (ref.current !== null && ref.current.swiper !== null) {
+      ref.current.swiper.slideNext();
+    }
+  };
+
+  const goPrev = () => {
+    if (ref.current !== null && ref.current.swiper !== null) {
+      ref.current.swiper.slidePrev();
+    }
+  };
+  const params = {
+    slidesPerView: 3,
+    slidesPerGroup: 3,
+    spaceBetween: 30,
+    breakpoints: {
+      0: {
+        slidesPerView: 1,
+        slidesPerGroup: 1,
+        spaceBetween: 0,
+      },
+      376: {
+        slidesPerView: 1,
+        slidesPerGroup: 1,
+        spaceBetween: 0,
+      },
+      576: {
+        slidesPerView: 1,
+        slidesPerGroup: 1,
+        spaceBetween: 0,
+      },
+      768: {
+        slidesPerView: 2,
+        slidesPerGroup: 2,
+        spaceBetween: 30,
+      },
+      992: {
+        slidesPerView: 2,
+        slidesPerGroup: 2,
+        spaceBetween: 30,
+      },
+      1200: {
+        slidesPerView: 3,
+        slidesPerGroup: 3,
+        spaceBetween: 30,
+      },
+    },
+  };
   return (
-    <Box as="section" id="projects" sx={styles.projects}>
+    <Box sx={styles.projects} id="news">
       <Container>
         <ProjectTitle title="Projects" text="" />
-        <Box as={Masonry} options={masonryOptions} sx={styles.blogWrapper}>
-          {BLOG_DATA.map(
-            ({ image, title, description, path, linkLabel }, index) => (
+
+        <Swiper {...params} ref={ref}>
+          {projects.map((project, index) => (
+            <div className="swiper-slider" key={`feature-card-key${index}`}>
               <ProjectCard
-                key={index}
-                image={image}
-                title={title}
-                description={description}
-                path={path}
-                linkLabel={linkLabel}
+                image={project.homeImage}
+                title={project.title}
+                path={project.path}
               />
-            )
-          )}
+            </div>
+          ))}
+        </Swiper>
+        <Box sx={styles.carouselBtns}>
+          <button aria-label="left btn" onClick={goPrev}>
+            <FaLongArrowAltLeft />
+          </button>
+          <button onClick={goNext} aria-label="right btn">
+            <FaLongArrowAltRight />
+          </button>
         </Box>
       </Container>
     </Box>
@@ -64,11 +88,36 @@ const Projects = () => {
 export default Projects;
 
 const styles = {
-  projects: {
-    pt: ["80px", null, null, null, "80px", null, "100px"],
-    pb: ["40px", null, null, null, "0px", null, "100px"],
+  blockTitle: {
+    textAlign: "center",
   },
-  blogWrapper: {
-    mx: "-15px",
+  projects: {
+    pt: ["80px", null, null, null, null, null, "120px"],
+    pb: ["80px", null, null, null, "170px"],
+    backgroundColor: "#F8FAFC",
+    ".swiper-slider": {
+      overflowY: "visible",
+      overflowX: "hidden",
+    },
+  },
+  carouselBtns: {
+    display: ["flex", null, null, null, null, "none"],
+    justifyContent: "center",
+    alignItems: "center",
+    button: {
+      border: "none",
+      outline: "none",
+      backgroundColor: "transparent",
+      fontSize: [2, null, 4, null, 5],
+      color: "#BBC7D7",
+      width: "auto",
+      padding: [0],
+      margin: "0 5px",
+      mt: "15px",
+      transition: "500ms",
+      "&:hover, &:active, &:focus": {
+        color: "primary",
+      },
+    },
   },
 };

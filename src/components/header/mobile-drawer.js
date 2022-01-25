@@ -4,7 +4,7 @@ import { Scrollbars } from "react-custom-scrollbars";
 import Drawer from "components/drawer";
 import { DrawerContext } from "../../contexts/drawer/drawer.context";
 import { IoMdClose, IoMdMenu } from "react-icons/io";
-import { Link } from "react-scroll";
+import { useRouter } from "next/router";
 import {
   FaFacebookF,
   FaTwitter,
@@ -12,6 +12,7 @@ import {
   FaInstagram,
 } from "react-icons/fa";
 import menuItems from "./header.data";
+import { NavLink } from "components/link";
 
 const social = [
   {
@@ -34,6 +35,7 @@ const social = [
 
 const MobileDrawer = () => {
   const { state, dispatch } = useContext(DrawerContext);
+  const router = useRouter();
 
   // Toggle drawer
   const toggleHandler = React.useCallback(() => {
@@ -59,18 +61,16 @@ const MobileDrawer = () => {
       <Scrollbars autoHide>
         <Box sx={styles.content}>
           <Box sx={styles.menu}>
-            {menuItems.map(({ path, label }, i) => (
-              <Link
-                activeClass="active"
-                to={path}
-                spy={true}
-                smooth={true}
-                offset={-70}
-                duration={500}
-                key={i}
-              >
-                {label}
-              </Link>
+            {menuItems.map(({ path, label }, index) => (
+              <NavLink
+                href={path}
+                label={label}
+                key={index}
+                activeClass={
+                  router.pathname === path ||
+                  router.asPath.split("/")[1] === path.split("/")[1]
+                }
+              />
             ))}
           </Box>
 
@@ -137,18 +137,18 @@ const styles = {
     flexDirection: "column",
     a: {
       fontSize: "16px",
-      fontWeight: "500",
-      color: "text_white",
+      fontWeight: "bold",
+      color: "heading",
       py: "15px",
       cursor: "pointer",
       borderBottom: "1px solid #e8e5e5",
       transition: "all 0.25s",
       textTransform: "uppercase",
       "&:hover": {
-        color: "primary",
+        color: "#DB1F26",
       },
       "&.active": {
-        color: "primary",
+        color: "#DB1F26",
       },
     },
   },

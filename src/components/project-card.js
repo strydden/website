@@ -1,8 +1,7 @@
-import React from "react";
 import { Box, Text, Heading, Image } from "theme-ui";
 import { Link } from "./link";
-
-import arrowAngle from "assets/arrow-angle.svg";
+import { keyframes } from "@emotion/react";
+import { IoIosArrowForward } from "react-icons/io";
 
 const ProjectCard = ({ image, title, description, path, linkLabel }) => {
   return (
@@ -33,7 +32,7 @@ const ProjectCard = ({ image, title, description, path, linkLabel }) => {
             path={path}
             target="_blank"
           >
-            {linkLabel} <Image src={arrowAngle} alt="angle icon" />
+            {linkLabel} <IoIosArrowForward size="16px" />
           </Link>
         )}
       </Box>
@@ -42,6 +41,16 @@ const ProjectCard = ({ image, title, description, path, linkLabel }) => {
 };
 
 export default ProjectCard;
+
+const fadeRight = keyframes`
+  from {
+    opacity: 0;
+    transform: translateX(-5px);
+  }
+  to: {
+    opacity: 1;
+  }
+`;
 
 const styles = {
   blogCard: {
@@ -123,10 +132,19 @@ const styles = {
   },
   linkLabel: {
     color: "#3183FF",
-    fontSize: "16px",
-    fontWeight: "500",
-    img: {
-      ml: "6px",
+    cursor: "pointer",
+    fontSize: [1, null, null, "15px"],
+    fontWeight: 500,
+    display: "inline-flex",
+    alignItems: "center",
+    svg: {
+      transform: "translateX(3px)",
+      width: ["13px", null, null, "16px"],
+    },
+    ":hover": {
+      svg: {
+        animation: `${fadeRight} 0.5s linear`,
+      },
     },
   },
 };

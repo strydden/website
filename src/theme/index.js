@@ -3,18 +3,13 @@ export default {
   colors: {
     text: "#343D48", // body color and primary color
     text_secondary: "#02073E", // secondary body color
-    heading: "#0F2137", // primary heading color
+    heading: "#05182C", // primary heading color
     heading_secondary: "#02073E", // heading color
     background: "#FFFFFF", // body background color
-    background_secondary: "#F9FAFC", // secondary background color
+    backgroundSecondary: "#F9FAFC", // secondary background color
     border_color: "#E5ECF4", // border color
-    primary: "#F94962", // primary button and link color
-    secondary: "#3183FF", // secondary color - can be used for hover states
-    muted: "#7B8188", // muted color
-    accent: "#609", // a contrast color for emphasizing UI
-    yellow: "#F6C416",
-
-    // highlight	a background color for highlighting text
+    primary: "#223266", // primary button and link color
+    secondary: "#05182C", // secondary color - can be used for hover states
     modes: {
       dark: {
         text: "#fff",
@@ -62,7 +57,7 @@ export default {
       px: [4, 6],
     },
     header: {
-      color: "#02073E",
+      color: "#05182C",
       fontWeight: "normal",
       py: 3,
       position: "absolute",
@@ -337,7 +332,15 @@ export default {
   badges: {
     primary: {
       color: "background",
-      bg: "#28A5FF",
+      bg: "primary",
+      borderRadius: 30,
+      p: "3px 11px",
+      fontSize: 1,
+      letterSpacing: "-0.5px",
+    },
+    secondary: {
+      color: "heading",
+      bg: "border_color",
       borderRadius: 30,
       p: "3px 11px",
       fontSize: 1,

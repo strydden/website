@@ -9,8 +9,7 @@ export default function Banner() {
       <Container sx={styles.banner.container}>
         <Box sx={styles.banner.contentBox}>
           <Heading as="h1" variant="heroPrimary">
-            Combining business intelligence and domain expertise to drive
-            transformation & change.
+            Where Business vision meets top notch IT Services
           </Heading>
           {/* <Text as="p" variant="heroSecondary">
             Get your blood tests delivered at let home collect sample from the

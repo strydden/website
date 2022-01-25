@@ -1,81 +1,52 @@
-import React from "react";
-import { Box, Container, Grid } from "theme-ui";
+/** @jsxRuntime classic */
+/** @jsx jsx */
+import { jsx, Box, Container } from "theme-ui";
 import BlockTitle from "components/project-title";
-import ServiceCard from "components/service-card";
-import serviceImage1 from "assets/service-1.png";
-import serviceImage2 from "assets/service-2.png";
-import serviceImage3 from "assets/service-3.png";
-import serviceImage4 from "assets/service-4.png";
-import serviceImage5 from "assets/service-5.png";
-import serviceImage6 from "assets/service-6.png";
+import ServiceCard from "components/ServiceCard";
+import { services } from "constants/services";
 
-const SERVICES_DATA = [
-  {
-    image: serviceImage1,
-    text: "",
-    heading: "UI/UX",
-    path: "#",
-  },
-  {
-    image: serviceImage2,
-    text: "",
-    heading: "Web Design",
-    path: "#",
-  },
-  {
-    image: serviceImage3,
-    text: "",
-    heading: "Web Development",
-    path: "#",
-  },
-  {
-    image: serviceImage4,
-    text: "",
-    heading: "Mobile Application Development",
-    path: "#",
-  },
-  {
-    image: serviceImage6,
-    text: "",
-    heading: "Game Development",
-    path: "#",
-  },
-  {
-    image: serviceImage5,
-    text: "",
-    heading: "Cloud Engineering",
-    path: "#",
-  },
-];
 const Services = () => {
   return (
-    <Box as="section" id="services" sx={styles.services}>
+    <section id="features" sx={styles.section}>
       <Container>
         <BlockTitle title="Services" text="" />
-        <Grid sx={styles.grid}>
-          {SERVICES_DATA.map(({ image, text, heading, path }, index) => (
-            <ServiceCard
-              image={image}
-              text={text}
-              heading={heading}
-              path={path}
-              key={index}
-            />
+        <Box sx={styles.grid}>
+          {services.map((item, index) => (
+            <ServiceCard key={index} data={item} />
           ))}
-        </Grid>
+        </Box>
       </Container>
-    </Box>
+    </section>
   );
 };
 
 export default Services;
 
 const styles = {
-  services: {
-    pt: ["80px", null, null, null, "80px", null, "100px"],
+  section: {
+    backgroundColor: "backgroundSecondary",
+    py: 10,
+  },
+  heading: {
+    marginBottom: [7, null, null, 8, 7],
+    p: {
+      maxWidth: 490,
+      margin: ["10px auto 0"],
+    },
   },
   grid: {
-    gridGap: "30px",
-    gridTemplateColumns: ["1fr", null, null, "1fr 1fr", null, "1fr 1fr 1fr"],
+    gap: [6, null, 0],
+    display: "grid",
+    maxWidth: 1080,
+    margin: "0 auto",
+    gridTemplateColumns: [
+      "repeat(1, 1fr)",
+      null,
+      null,
+      "repeat(2, 1fr)",
+      "repeat(3, 1fr)",
+    ],
+    borderTop: (t) => [null, null, `1px solid ${t.colors.border_color}`],
+    borderLeft: (t) => [null, null, `1px solid ${t.colors.border_color}`],
   },
 };
