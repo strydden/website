@@ -13,13 +13,12 @@ import { useForm, ValidationError } from "@formspree/react";
 import { useState, useEffect } from "react";
 
 const data = {
-  title: "We'd love to help you exceeding your business goals.",
-  subtitle: "Drop your inquiry here, and our experts will get back to you.",
+  title: "Drop your inquiry here, and our experts will get back to you.",
   address: `B01-403 To 406, 4th Floor, 3rd Eye Vision
               Opp. Shivalik Plaza, IIM Road, Panjarapole
               Ahmedabad, Gujarat 380009, India`,
   mobile: "+91-9888888888",
-  email: "dixit@strydden.com",
+  email: "info@strydden.com",
 };
 
 const Contact = () => {
@@ -42,9 +41,7 @@ const Contact = () => {
         <Box sx={styles.contentBox}>
           <ContactText
             title={data.title}
-            subtitle={data.subtitle}
             address={data.address}
-            mobile={data.mobile}
             email={data.email}
           />
         </Box>
@@ -114,7 +111,7 @@ const styles = {
     color: "white",
   },
   workflow: {
-    backgroundColor: "primary",
+    backgroundColor: "#05182C",
     backgroundImage: `url(${PatternBG})`,
     backgroundRepeat: `no-repeat`,
     backgroundPosition: "center center",

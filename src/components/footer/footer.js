@@ -41,7 +41,7 @@ export default function Footer() {
                 mt: [3, null, null, null, 0],
               }}
             >
-              STRYDDEN
+              Strydden
             </Link>
             <Text as="span">Technologies LLP</Text>
           </Flex>
