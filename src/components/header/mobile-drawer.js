@@ -145,10 +145,10 @@ const styles = {
       transition: "all 0.25s",
       textTransform: "uppercase",
       "&:hover": {
-        color: "#DB1F26",
+        color: "#184CA1",
       },
       "&.active": {
-        color: "#DB1F26",
+        color: "#184CA1",
       },
     },
   },
