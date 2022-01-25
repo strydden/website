@@ -1,9 +1,9 @@
-import serviceImage1 from "assets/service-1.png";
-import serviceImage2 from "assets/service-2.png";
-import serviceImage3 from "assets/service-3.png";
-import serviceImage4 from "assets/service-4.png";
-import serviceImage5 from "assets/service-5.png";
-import serviceImage6 from "assets/service-6.png";
+import serviceImage1 from "assets/ui-ux.png";
+import serviceImage2 from "assets/web-design.png";
+import serviceImage3 from "assets/web-dev.png";
+import serviceImage4 from "assets/mobile-dev.png";
+import serviceImage5 from "assets/cloud.png";
+import serviceImage6 from "assets/game-dev.png";
 
 export const services = [
   {
