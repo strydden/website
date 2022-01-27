@@ -4,11 +4,17 @@ import serviceImage3 from "assets/web-dev.png";
 import serviceImage4 from "assets/mobile-dev.png";
 import serviceImage5 from "assets/cloud.png";
 import serviceImage6 from "assets/game-dev.png";
+import serviceSvgUI_UX from "assets/ui-ux-service.svg";
+import serviceSvgWeb_Design from "assets/web-design-service.svg";
+import serviceSvgWeb_Dev from "assets/web-dev-service.svg";
+import serviceSvgMobile_Dev from "assets/mobile-dev-service.svg";
+import serviceSvgGame_Dev from "assets/game-dev-service.svg";
+import serviceSvgCloud from "assets/cloud-service.svg";
 
 export const services = [
   {
     homeImage: serviceImage1,
-    servicesImage: serviceImage1,
+    servicesImage: serviceSvgUI_UX,
     homePageDesc1: "Win UX with our lucid UI designs.",
     homePageDesc2: "Get the best UI-UX maestros work on your projects.",
     desc1:
@@ -28,7 +34,7 @@ export const services = [
   },
   {
     homeImage: serviceImage2,
-    servicesImage: serviceImage2,
+    servicesImage: serviceSvgWeb_Design,
     homePageDesc1: "Get best looking, functional websites.",
     homePageDesc2: "Get amazing web designs from talented technocrats.",
     desc1:
@@ -46,7 +52,7 @@ export const services = [
   },
   {
     homeImage: serviceImage3,
-    servicesImage: serviceImage3,
+    servicesImage: serviceSvgWeb_Dev,
     homePageDesc1: "Premier websites for all you do.",
     homePageDesc2:
       "Get us to build cutting-edge websites for your brilliant business plan.",
@@ -69,7 +75,7 @@ export const services = [
   },
   {
     homeImage: serviceImage4,
-    servicesImage: serviceImage4,
+    servicesImage: serviceSvgMobile_Dev,
     homePageDesc1: "Turn your ideas into great mobile apps.",
     homePageDesc2:
       "Get scalable, stable, beautiful mobile apps for Android and iOS.",
@@ -92,7 +98,7 @@ export const services = [
   },
   {
     homeImage: serviceImage6,
-    servicesImage: serviceImage6,
+    servicesImage: serviceSvgGame_Dev,
     homePageDesc1: "Build the next gaming sensation with us.",
     homePageDesc2:
       "Hire the best game developers to create market-ready products from scratch.",
@@ -111,7 +117,7 @@ export const services = [
   },
   {
     homeImage: serviceImage5,
-    servicesImage: serviceImage5,
+    servicesImage: serviceSvgCloud,
     homePageDesc1: "Get over-the-cloud apps built beyond your expectations.",
     homePageDesc2:
       "Hire expert cloud engineers to build cloud-based software solutions for your business.",

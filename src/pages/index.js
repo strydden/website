@@ -1,16 +1,11 @@
 import React from "react";
-import { ThemeProvider } from "theme-ui";
-import theme from "theme";
 import SEO from "components/seo";
 import Layout from "components/layout";
 import Banner from "sections/banner";
 import Services from "sections/services";
-import Subscribe from "sections/subscribe";
-import Testimonial from "sections/testimonial";
 import Projects from "sections/projects";
 import Contact from "sections/contact";
 import Technology from "sections/technology";
-import Blogs from "sections/blogs";
 
 const { BLOG_URL, CONTENT_API_KEY } = process.env;
 
@@ -37,10 +32,7 @@ export default function IndexPage() {
       <Services />
       <Technology />
       <Projects />
-      {/* <Testimonial /> */}
-      {/* <Blogs posts={posts} /> */}
       <Contact />
-      {/* <Subscribe /> */}
     </Layout>
   );
 }
