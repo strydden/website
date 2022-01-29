@@ -6,6 +6,7 @@ import {
   Textarea,
   Button,
   Spinner,
+  Heading,
 } from "theme-ui";
 import ContactText from "components/contact-text";
 import PatternBG from "assets/patternBG.png";
@@ -25,15 +26,28 @@ const Contact = () => {
   const [state, handleSubmit] = useForm("xgedwvqy"),
     [name, setName] = useState(""),
     [email, setEmail] = useState(""),
-    [message, setMessage] = useState("");
+    [message, setMessage] = useState(""),
+    [showSuccessMessage, setShowSuccessMessage] = useState(false);
 
   useEffect(() => {
     if (state.succeeded || state.errors) {
       setEmail("");
       setName("");
       setMessage("");
+      state.succeeded && setShowSuccessMessage(true);
     }
   }, [state.succeeded, state.errors]);
+
+  useEffect(() => {
+    if (showSuccessMessage) {
+      var interval = setTimeout(() => {
+        setShowSuccessMessage(false);
+      }, 3000);
+    }
+    return () => {
+      clearInterval(interval);
+    };
+  }, [showSuccessMessage]);
 
   return (
     <Box id="contact" as="section" sx={styles.workflow}>
@@ -48,6 +62,10 @@ const Contact = () => {
         <Box sx={styles.thumbnail}>
           {state.submitting ? (
             <Spinner sx={styles.spinner} />
+          ) : state.succeeded && showSuccessMessage ? (
+            <Heading as="h2" sx={styles.successMessage}>
+              Thank you! Your inquiry has been sent.
+            </Heading>
           ) : (
             <Box as="form" onSubmit={handleSubmit}>
               <Label htmlFor="name">Name</Label>
@@ -161,5 +179,8 @@ const styles = {
     right: -165,
     zIndex: -1,
     display: ["none", "inline-block", "none", null, "inline-block"],
+  },
+  successMessage: {
+    color: "#fff",
   },
 };

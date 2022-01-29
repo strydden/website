@@ -307,6 +307,7 @@ export default {
     input: {
       borderRadius: 8,
       borderColor: "#ffffff",
+      backgroundColor: "#ffffff",
       height: 60,
       "&:focus": {
         backgroundColor: "#ffffff",
@@ -318,6 +319,7 @@ export default {
     textarea: {
       borderRadius: 8,
       borderColor: "#ffffff",
+      backgroundColor: "#ffffff",
       "&:focus": {
         backgroundColor: "#ffffff",
         borderColor: "#ffffff",

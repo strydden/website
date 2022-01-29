@@ -76,7 +76,7 @@ const styles = {
       pr: [0, null, null, null, null, 5],
     },
     label: {
-      fontSize: [2, 3, 3, null, null, null, 4],
+      fontSize: [1, 2, 2, null, null, null, 2],
       color: "#FFFFFF",
       lineHeight: [1.4, 1.45],
       fontWeight: "500",

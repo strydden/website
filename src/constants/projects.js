@@ -29,7 +29,8 @@ export const projects = [
     desc2: "",
     title: "Travalab Mobile App",
     path: "/projects/travalab-mobile-app",
-    externalLink: "https://travalab.com/",
+    externalLink:
+      "https://play.google.com/store/apps/details?id=com.dev.tundra",
     technologyList: [
       "Medical and vision",
       "Life insurance",

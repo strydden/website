@@ -30,15 +30,16 @@ export default function Footer() {
             <Link
               path="/"
               sx={{
-                variant: "links.logo",
                 display: "flex",
                 cursor: "pointer",
-                ml: 2,
-                mr: 2,
+                ml: 1,
+                mr: 1,
                 textDecoration: "none",
-                color: "primary",
-                fontWeight: "bold",
                 mt: [3, null, null, null, 0],
+                color: "text_secondary",
+                opacity: 0.7,
+                fontSize: 1,
+                lineHeight: "18px",
               }}
             >
               Strydden
