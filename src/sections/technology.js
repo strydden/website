@@ -42,11 +42,11 @@ import appium from "assets/appium.png";
 const frontend = [
   {
     icon: html,
-    name: "Html",
+    name: "HTML",
   },
   {
     icon: css,
-    name: "Css",
+    name: "CSS",
   },
   {
     icon: js,
@@ -54,19 +54,19 @@ const frontend = [
   },
   {
     icon: react,
-    name: "React Js",
+    name: "ReactJS",
   },
   {
     icon: angular,
-    name: "Angular Js",
+    name: "AngularJS",
   },
   {
     icon: next,
-    name: "Next Js",
+    name: "NextJS",
   },
   {
     icon: node,
-    name: "Node Js",
+    name: "NodeJS",
   },
 ];
 
@@ -89,7 +89,7 @@ const backend = [
   },
   {
     icon: node,
-    name: "Node Js",
+    name: "NodeJS",
   },
   {
     icon: python,
@@ -500,6 +500,9 @@ const styles = {
       fontWeight: "500",
       lineHeight: "18px",
       mt: [1, null, null, null, 1],
+    },
+    "@media screen and (max-width: 480px)": {
+      justifyContent: "center",
     },
   },
 };

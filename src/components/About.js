@@ -2,9 +2,8 @@
 /** @jsx jsx */
 import { jsx, Box, Container, Grid, Heading, Text } from "theme-ui";
 import { IoIosCheckmarkCircle } from "react-icons/io";
-import Image from "components/image";
 
-const Service = ({ data, backgroundColor, flexDirection }) => {
+const About = ({ data, backgroundColor, flexDirection }) => {
   return (
     <Box
       as="section"
@@ -23,8 +22,43 @@ const Service = ({ data, backgroundColor, flexDirection }) => {
             justifyContent: "space-between",
           }}
         >
-          <Box sx={styles.illustration}>
-            <Image src={data.servicesImage} loading="lazy" alt="support" />
+          <Box sx={styles.rightContent}>
+            <Box sx={styles.rightContentText}>
+              <Box sx={styles.coreStrengthsBox}>
+                <Text as="p" sx={styles.coreStrengthsTitle}>
+                  {data.coreStrengthsTitle}
+                </Text>
+                {data.coreStrengthsDescList && (
+                  <Grid sx={styles.list} as="ul">
+                    {data.coreStrengthsDescList.map((item, i) => (
+                      <Box as="li" key={i}>
+                        <IoIosCheckmarkCircle
+                          sx={{ color: "primary", mr: 2 }}
+                          size="20px"
+                        />
+                        <Text as="p">{item}</Text>
+                      </Box>
+                    ))}
+                  </Grid>
+                )}
+              </Box>
+              <Box sx={styles.coreStrengthsBox}>
+                <Text as="p" sx={styles.coreStrengthsTitle}>
+                  {data.ourMissionTitle}
+                </Text>
+                <Text as="p" sx={styles.coreStrengthsDesc}>
+                  {data.ourMissionDesc}
+                </Text>
+              </Box>
+              <Box sx={styles.coreStrengthsBox}>
+                <Text as="p" sx={styles.coreStrengthsTitle}>
+                  {data.ourVisionTitle}
+                </Text>
+                <Text as="p" sx={styles.coreStrengthsDesc}>
+                  {data.ourVisionDesc}
+                </Text>
+              </Box>
+            </Box>
           </Box>
           <Box sx={styles.content}>
             <Heading sx={styles.title}>{data.title}</Heading>
@@ -38,20 +72,6 @@ const Service = ({ data, backgroundColor, flexDirection }) => {
                 </Text>
               )}
             </Box>
-
-            {data.subServicesList && (
-              <Grid sx={styles.list} as="ul">
-                {data.subServicesList.map((item, i) => (
-                  <Text as="li" key={i}>
-                    <IoIosCheckmarkCircle
-                      sx={{ color: "primary", mr: 2 }}
-                      size="20px"
-                    />
-                    {item}
-                  </Text>
-                ))}
-              </Grid>
-            )}
           </Box>
         </Box>
       </Container>
@@ -59,24 +79,19 @@ const Service = ({ data, backgroundColor, flexDirection }) => {
   );
 };
 
-export default Service;
+export default About;
 
 const styles = {
-  illustration: {
-    textAlign: "center",
-    position: "relative",
+  rightContent: {
     display: "flex",
-    alignItems: "center",
-    mt: [2, null, null, 0, 4, 0],
-    img: {
-      maxWidth: ["100%", null, null, null, null, "100%"],
-    },
+    flexDirection: "column",
   },
+  rightContentText: {},
   content: {
     marginTop: [null, null, null, null, null, -16],
     maxWidth: [null, null, null, 420, 560, "none"],
     margin: [null, null, null, "0 auto", "unset"],
-    textAlign: ["center", null, null, null, "left"],
+    textAlign: ["left", null, null, null, "left"],
   },
   title: {
     color: "heading",
@@ -110,23 +125,42 @@ const styles = {
   },
   list: {
     gap: "0 18px",
-    gridTemplateColumns: [
-      "repeat(1, 1fr)",
-      "repeat(1, 1fr)",
-      "repeat(2, 1fr)",
-      "repeat(2, 200px)",
-    ],
+    gridTemplateColumns: "repeat(1, 1fr)",
     justifyContent: [null, null, null, "center", "unset"],
     listStyle: "none",
-    mt: [4, null, null, 5, 4, 5],
+    mt: [4, null, null, 3, 3, 3],
     p: 0,
     li: {
+      display: "grid",
+      gridTemplateColumns: "30px 1fr",
+      alignItems: "center",
+      textAlign: "left",
+      py: 1,
+    },
+    "li > p": {
       fontSize: [0, 1, null, 2, "15px", 2],
       fontWeight: 500,
-      alignItems: "center",
       color: "textSecondary",
-      display: "flex",
-      lineHeight: [2.81, null, null, null, 2.2, 2.81],
     },
+  },
+  coreStrengthsBox: {
+    mt: [4, null, null, 5, 4, 5],
+    maxWidth: 470,
+  },
+  coreStrengthsTitle: {
+    fontSize: [0, 1, null, 2, "15px", 2],
+    fontWeight: 600,
+    alignItems: "center",
+    color: "primary",
+    display: "flex",
+    textAlign: "left",
+  },
+  coreStrengthsDesc: {
+    fontSize: [0, 1, null, 2, "15px", 2],
+    fontWeight: 500,
+    alignItems: "center",
+    color: "textSecondary",
+    display: "flex",
+    textAlign: "left",
   },
 };
