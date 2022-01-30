@@ -49,7 +49,7 @@ const Project = ({ data, backgroundColor, flexDirection }) => {
                 <Link
                   as="a"
                   rel="noreferrer"
-                  path={data.externalLink}
+                  path={data.externalLink1}
                   target="_blank"
                   sx={styles.linkLabel}
                 >
@@ -63,7 +63,7 @@ const Project = ({ data, backgroundColor, flexDirection }) => {
                 <Link
                   as="a"
                   rel="noreferrer"
-                  path={data.externalLink}
+                  path={data.externalLink2}
                   target="_blank"
                   sx={styles.linkLabel}
                 >
