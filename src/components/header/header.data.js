@@ -8,12 +8,12 @@ export default [
     label: "Services",
   },
   {
-    path: "/about",
-    label: "About",
-  },
-  {
     path: "/projects",
     label: "Projects",
+  },
+  {
+    path: "/about",
+    label: "About",
   },
   // {
   //   path: "/careers",
