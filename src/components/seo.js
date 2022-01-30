@@ -1,11 +1,12 @@
-import React from 'react';
-import Head from 'next/head';
+import React from "react";
+import Head from "next/head";
 
 export default function SEO({
   description = "Where Business vision meets top notch IT Services",
   author = "STRYDDEN",
   meta,
   title = "STRYDDEN Technologies LLP",
+  image = "https://www.strydden.com/seo-image.png",
 }) {
   const metaData = [
     {
@@ -25,6 +26,10 @@ export default function SEO({
       content: `website`,
     },
     {
+      name: `og:image`,
+      content: image,
+    },
+    {
       name: `twitter:card`,
       content: `summary`,
     },
@@ -39,6 +44,10 @@ export default function SEO({
     {
       name: `twitter:description`,
       content: description,
+    },
+    {
+      name: `twitter:image`,
+      content: image,
     },
   ].concat(meta);
   return (
