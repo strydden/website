@@ -2,7 +2,7 @@ import React from 'react';
 import Head from 'next/head';
 
 export default function SEO({
-  description = "STRYDDEN Technologies LLP",
+  description = "Where Business vision meets top notch IT Services",
   author = "STRYDDEN",
   meta,
   title = "STRYDDEN Technologies LLP",

@@ -5,6 +5,7 @@ import { IoIosCheckmarkCircle, IoIosArrowForward } from "react-icons/io";
 import Image from "components/image";
 import { Link } from "./link";
 import { keyframes } from "@emotion/react";
+import { projects } from "constants/projects";
 
 const Project = ({ data, backgroundColor, flexDirection }) => {
   return (
@@ -43,18 +44,36 @@ const Project = ({ data, backgroundColor, flexDirection }) => {
                 {data.desc2}
               </Text>
             )}
-            {data.externalLink && (
-              <Link
-                as="a"
-                rel="noreferrer"
-                path={data.externalLink}
-                target="_blank"
-                sx={styles.linkLabel}
-              >
-                Visit <IoIosArrowForward size="16px" />
-              </Link>
-            )}
-
+            <Box sx={styles.externalLinks}>
+              {data.externalLink1 && (
+                <Link
+                  as="a"
+                  rel="noreferrer"
+                  path={data.externalLink}
+                  target="_blank"
+                  sx={styles.linkLabel}
+                >
+                  {data.title.toLowerCase() === projects[1].title.toLowerCase()
+                    ? "View Android"
+                    : "Visit"}
+                  <IoIosArrowForward size="16px" />
+                </Link>
+              )}
+              {data.externalLink2 && (
+                <Link
+                  as="a"
+                  rel="noreferrer"
+                  path={data.externalLink}
+                  target="_blank"
+                  sx={styles.linkLabel}
+                >
+                  {data.title.toLowerCase() === projects[1].title.toLowerCase()
+                    ? "View iOS"
+                    : "Visit"}
+                  <IoIosArrowForward size="16px" />
+                </Link>
+              )}
+            </Box>
             <Box sx={styles.technologyBox}>
               <Text as="p" sx={styles.technologyText}>
                 Technologies
@@ -112,9 +131,9 @@ const styles = {
   },
   title: {
     color: "heading",
-    fontFamily: "headingAlt",
-    fontSize: [4, null, null, 8, null, null, 11],
-    fontWeight: 500,
+    fontFamily: "heading",
+    fontSize: [4, null, null, 8, null, null, 9],
+    fontWeight: 600,
     lineHeight: [1.33, null, 1.4, 1.53],
     letterSpacing: ["-0.5px", null, null, "-1px"],
     mb: 3,
@@ -190,5 +209,12 @@ const styles = {
     alignItems: "center",
     color: "textSecondary",
     display: "flex",
+  },
+  externalLinks: {
+    display: "flex",
+    mt: "0.5rem",
+    "a:not(:last-child)": {
+      mr: "1rem",
+    },
   },
 };

@@ -27,14 +27,12 @@ export default function Footer() {
           </Flex> */}
           <Flex sx={styles.copyright}>
             <Text as="span">&copy; Copyright {new Date().getFullYear()}</Text>
-            <Link
-              path="/"
+            <Text
+              as="span"
               sx={{
                 display: "flex",
-                cursor: "pointer",
                 ml: 1,
                 mr: 1,
-                textDecoration: "none",
                 mt: [3, null, null, null, 0],
                 color: "primary",
                 fontWeight: "600",
@@ -42,8 +40,8 @@ export default function Footer() {
                 lineHeight: "18px",
               }}
             >
-              Strydden
-            </Link>
+              Strydden Technologies LLP
+            </Text>
           </Flex>
           {/* <Flex as="ul" sx={styles.footerNav}>
             {menuItems?.map((item, index) => (
@@ -89,7 +87,7 @@ const styles = {
   },
   copyright: {
     alignItems: "center",
-    flexDirection: ["row", "row", "row", "row", "row"],
+    flexDirection: ["column", "row", "row", "row", "row"],
     a: {
       fontSize: [1, null, null, null, 1],
     },

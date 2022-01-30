@@ -95,9 +95,9 @@ const styles = {
   },
   title: {
     color: "heading",
-    fontFamily: "headingAlt",
-    fontSize: [4, null, null, 8, null, null, 11],
-    fontWeight: 500,
+    fontFamily: "heading",
+    fontSize: [4, null, null, 8, null, null, 9],
+    fontWeight: 600,
     lineHeight: [1.33, null, 1.4, 1.53],
     letterSpacing: ["-0.5px", null, null, "-1px"],
     mb: 3,

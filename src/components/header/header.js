@@ -127,7 +127,7 @@ const styles = {
       transition: "all 0.15s",
       color: "heading",
       textTransform: "uppercase",
-      fontWeight: "bold",
+      fontWeight: 600,
       position: "relative",
       "&:hover": {
         color: "#184CA1",

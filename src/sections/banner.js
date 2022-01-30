@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { jsx } from "theme-ui";
 import { Container, Box, Heading, Image } from "theme-ui";
-import BannerImage from "assets/banner.png";
+import BannerImage from "assets/banner.svg";
 
 export default function Banner() {
   return (
@@ -30,7 +30,6 @@ const styles = {
     overflow: ["hidden", "initial", null, null, "hidden"],
     pt: ["150px", "145px"],
     pb: [0, null, null, null, 2],
-    height: ["100vh", "100vh", "100vh", "100vh", "100vh"],
     container: {
       display: "flex",
       flexDirection: ["column", null, null, null, "row"],
@@ -59,7 +58,6 @@ const styles = {
       mb: [-2, null],
       img: {
         height: [360, "auto"],
-        width: ["auto"],
       },
     },
   },
