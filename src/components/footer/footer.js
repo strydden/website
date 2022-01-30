@@ -36,15 +36,14 @@ export default function Footer() {
                 mr: 1,
                 textDecoration: "none",
                 mt: [3, null, null, null, 0],
-                color: "text_secondary",
-                opacity: 0.7,
+                color: "primary",
+                fontWeight: "600",
                 fontSize: 1,
                 lineHeight: "18px",
               }}
             >
               Strydden
             </Link>
-            <Text as="span">Technologies LLP</Text>
           </Flex>
           {/* <Flex as="ul" sx={styles.footerNav}>
             {menuItems?.map((item, index) => (
@@ -90,11 +89,14 @@ const styles = {
   },
   copyright: {
     alignItems: "center",
-    flexDirection: ["column", "row", "row", "row", "row"],
+    flexDirection: ["row", "row", "row", "row", "row"],
+    a: {
+      fontSize: [1, null, null, null, 1],
+    },
     span: {
       color: "text_secondary",
       opacity: 0.7,
-      fontSize: 1,
+      fontSize: [1, null, null, null, 1],
       lineHeight: "18px",
       // ml: [null, null, null, null, 3],
       mt: [3, null, null, null, 0],

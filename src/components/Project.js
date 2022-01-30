@@ -62,13 +62,13 @@ const Project = ({ data, backgroundColor, flexDirection }) => {
               {data.technologyList && (
                 <Grid sx={styles.list} as="ul">
                   {data.technologyList.map((item, i) => (
-                    <Text as="li" key={i}>
+                    <Box as="li" key={i}>
                       <IoIosCheckmarkCircle
                         sx={{ color: "primary", mr: 2 }}
                         size="20px"
                       />
-                      {item}
-                    </Text>
+                      <Text as="p">{item}</Text>
+                    </Box>
                   ))}
                 </Grid>
               )}
@@ -108,7 +108,7 @@ const styles = {
     marginTop: [null, null, null, null, null, -16],
     maxWidth: [null, null, null, 420, 560, "none"],
     margin: [null, null, null, "0 auto", "unset"],
-    textAlign: ["center", null, null, null, "left"],
+    textAlign: ["left", null, null, null, "left"],
   },
   title: {
     color: "heading",
@@ -159,22 +159,26 @@ const styles = {
   list: {
     gap: "0 18px",
     gridTemplateColumns: [
+      "repeat(1, 1fr)",
+      "repeat(1, 1fr)",
       "repeat(2, 1fr)",
-      "repeat(2, 1fr)",
-      "repeat(2, 1fr)",
-      "repeat(2, 200px)",
-      "repeat(2, 250px)",
+      "repeat(2, 220px)",
     ],
     justifyContent: [null, null, null, "center", "unset"],
     listStyle: "none",
+    mt: [4, null, null, 3, 3, 3],
     p: 0,
     li: {
+      display: "grid",
+      gridTemplateColumns: "30px 1fr",
+      alignItems: "center",
+      textAlign: "left",
+      py: 1,
+    },
+    "li > p": {
       fontSize: [0, 1, null, 2, "15px", 2],
       fontWeight: 500,
-      alignItems: "center",
       color: "textSecondary",
-      display: "flex",
-      lineHeight: [2.81, null, null, null, 2.2, 2.81],
     },
   },
   technologyBox: {
