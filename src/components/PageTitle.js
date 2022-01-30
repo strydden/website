@@ -27,6 +27,7 @@ const styles = {
       letterSpacing: "-1.5px",
       lineHeight: 1,
       mb: "20px",
+      textTransform: "uppercase",
     },
     p: {
       lineHeight: 1,

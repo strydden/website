@@ -218,7 +218,7 @@ const Technology = () => {
       <Container sx={styles.container}>
         <BlockTitle
           title="Technology Stack"
-          text="At Strydden, we use some of the most advanced tools, technologies, and processes to build state-of-the-art tech products for you."
+          text="At Strydden, we use some of the most advanced tools, technologies and processes to build state-of-the-art tech products for you."
         />
         <Box sx={styles.tabButtonTopWrapper}>
           <Box sx={styles.tabButtonWrapper}>

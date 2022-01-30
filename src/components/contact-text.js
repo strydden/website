@@ -24,16 +24,16 @@ export default function ContactText({
         </Box>
         {mobile && (
           <Box sx={styles.box}>
-            <Heading as="h6" sx={styles.wrapper.label}>
+            <Text as="span" sx={styles.wrapper.label}>
               Mobile
-            </Heading>
+            </Text>
             <Text sx={styles.wrapper.value}>{mobile}</Text>
           </Box>
         )}
         <Box sx={styles.box}>
-          <Heading as="h6" sx={styles.wrapper.label}>
+          <Text as="span" sx={styles.wrapper.label}>
             Email
-          </Heading>
+          </Text>
           <Text sx={styles.wrapper.value}>{email}</Text>
         </Box>
       </Box>
@@ -76,7 +76,7 @@ const styles = {
       pr: [0, null, null, null, null, 5],
     },
     label: {
-      fontSize: [1, 2, 2, null, null, null, 2],
+      fontSize: 1,
       color: "#FFFFFF",
       lineHeight: [1.4, 1.45],
       fontWeight: "500",
