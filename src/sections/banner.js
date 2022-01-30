@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { jsx } from "theme-ui";
-import { Container, Box, Heading, Text, Image } from "theme-ui";
-import BannerThumb from "assets/images/banner-thumb.png";
+import { Container, Box, Heading, Image } from "theme-ui";
+import BannerImage from "assets/banner.png";
 
 export default function Banner() {
   return (
@@ -18,7 +18,7 @@ export default function Banner() {
           </Text> */}
         </Box>
         <Box sx={styles.banner.imageBox}>
-          <Image src={BannerThumb} alt="banner" width="740" height="782" />
+          <Image src={BannerImage} alt="banner" width="740" height="782" />
         </Box>
       </Container>
     </section>
@@ -30,6 +30,7 @@ const styles = {
     overflow: ["hidden", "initial", null, null, "hidden"],
     pt: ["150px", "145px"],
     pb: [0, null, null, null, 2],
+    height: ["100vh", "100vh", "100vh", "100vh", "100vh"],
     container: {
       display: "flex",
       flexDirection: ["column", null, null, null, "row"],
@@ -58,6 +59,7 @@ const styles = {
       mb: [-2, null],
       img: {
         height: [360, "auto"],
+        width: ["auto"],
       },
     },
   },
