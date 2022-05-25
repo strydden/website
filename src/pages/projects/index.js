@@ -23,6 +23,7 @@ const Projects = () => {
         backgroundColor="backgroundSecondary"
         flexDirection="row"
       />
+      <Project data={projects[3]} flexDirection="row-reverse" />
     </Layout>
   );
 };

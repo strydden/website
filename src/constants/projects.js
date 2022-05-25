@@ -1,6 +1,7 @@
 import travalabWeb from "assets/travalabWeb.png";
 import travalabApp from "assets/travalabApp.png";
 import qrcty from "assets/qrcty.png";
+import uwc from "assets/uwc.png";
 
 export const projects = [
   {
@@ -52,5 +53,16 @@ export const projects = [
       "AWS",
       "MongoDB",
     ],
+  },
+  {
+    homeImage: uwc,
+    projectsImage: uwc,
+    desc1:
+      "United Wrestling Club is a community-based club. UWC's core concepts focus on the art and applications of Folkstyle, Freestyle, and Greco Roman wrestling. UWC's goal is to create a year-round facility available to beginner, intermediate, and advanced athletes interested in the sport of wrestling.",
+    desc2: "",
+    title: "United Wrestling Club",
+    path: "/projects/united-wrestling-club",
+    externalLink1: "https://www.unitedwrestlingclub.com",
+    technologyList: ["React", "RoR", "AWS"],
   },
 ];
