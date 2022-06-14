@@ -63,6 +63,13 @@ export const projects = [
     title: "United Wrestling Club",
     path: "/projects/united-wrestling-club",
     externalLink1: "https://www.unitedwrestlingclub.com",
-    technologyList: ["React", "RoR", "AWS"],
+    technologyList: [
+      "React",
+      "RoR",
+      "Ruby",
+      "AWS",
+      "API Integration",
+      "Payment Gateway",
+    ],
   },
 ];
