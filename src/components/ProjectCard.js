@@ -36,6 +36,8 @@ const styles = {
       display: "block",
       width: "100%",
     },
+    padding: "0.5rem",
+    backgroundColor: "#fff",
   },
   content: {
     backgroundColor: "#fff",
