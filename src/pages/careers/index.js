@@ -3,7 +3,7 @@ import { jsx, Container, Text } from "theme-ui";
 import Layout from "components/layout";
 import PageTitle from "components/PageTitle";
 import Accordion from "components/accordion/accordion";
-
+import JobList from "components/JobList";
 const data = [
   {
     id: 1,
@@ -89,6 +89,7 @@ const Careers = () => {
           sx={{
             fontSize: [4, 5, 6, null, 7],
             color: "heading",
+            textAlign:"center",
             fontFamily: "heading",
             fontWeight: "body",
             letterSpacing: "heading",
@@ -97,7 +98,7 @@ const Careers = () => {
         >
           Job Positions
         </Text>
-        <Accordion items={data} />
+        <JobList items={data}/>
       </Container>
     </Layout>
   );
