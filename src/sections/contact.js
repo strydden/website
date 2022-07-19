@@ -19,7 +19,7 @@ const data = {
               Opp. Shivalik Plaza, IIM Road, Panjarapole
               Ahmedabad, Gujarat 380009, India`,
   mobile: "+91-9888888888",
-  email: "info@strydden.com",
+  email: ["info@strydden.com","careers@strydden.com"],
 };
 
 const Contact = () => {
@@ -67,7 +67,7 @@ const Contact = () => {
               Thank you! Your inquiry has been sent.
             </Heading>
           ) : (
-            <Box as="form" onSubmit={handleSubmit}>
+            <Box as="form" onSubmit={handleSubmit} style={styles.formBox}>
               <Label htmlFor="name">Name</Label>
               <Input
                 required
@@ -158,11 +158,16 @@ const styles = {
     px: [0, null, "30px", 0],
     textAlign: ["left", null, null, "left"],
     width: ["100%", "80%", null, 340, 400, 430, null, 485],
+    marginTop: "2vw",
     pb: ["50px", "60px", null, 0],
     mx: ["auto", null, null, 0],
     ".description": {
       pr: [0, null, 6, 7, 6],
     },
+  },
+  formBox: {
+    margin: "0 2vw",
+   
   },
   thumbnail: {
     display: "flex",

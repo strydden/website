@@ -27,7 +27,7 @@ const Project = ({ data, backgroundColor, flexDirection }) => {
               "column-reverse",
               flexDirection,
             ],
-            alignItems: "center",
+            alignItems: "flex-start",
             justifyContent: "space-between",
           }}
         >
