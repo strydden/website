@@ -101,7 +101,7 @@ const styles = {
     },
   },
   carouselBtns: {
-    display: ["flex", null, null, null, null, "none"],
+    display: ["flex", null, null, null, null],
     justifyContent: "center",
     alignItems: "center",
     button: {

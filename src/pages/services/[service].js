@@ -8,11 +8,19 @@ import Service from "components/Service";
 export async function getStaticProps({ params }) {
   return {
     props: {
-      service: StaticServices.find(
-        (service) =>
-          service.title.split("/").join(" ").toLowerCase() ===
-          params.service.split("-").join(" ").toLowerCase()
-      ),
+      service: StaticServices.find((service) => {
+        const serviceTitle =
+            service.title === "UI / UX"
+              ? service.title.toLowerCase().slice(0, 2) +
+                "/" +
+                service.title.toLowerCase().slice(5)
+              : service.title.split("/").join(" ").toLowerCase(),
+          serviceParamsTitle =
+            service.title === "UI / UX"
+              ? params.service.split("-").join("/").toLowerCase()
+              : params.service.split("-").join(" ").toLowerCase();
+        return serviceTitle === serviceParamsTitle;
+      }),
     },
     revalidate: 1,
   };
@@ -22,8 +30,10 @@ export async function getStaticPaths() {
   const paths = StaticServices.map((service) => ({
     params: {
       service:
-        service.title === "UI/UX"
-          ? service.title.toLowerCase().split("/").join("-")
+        service.title === "UI / UX"
+          ? service.title.toLowerCase().slice(0, 2) +
+            "-" +
+            service.title.toLowerCase().slice(5)
           : service.title.toLowerCase().split(" ").join("-"),
     },
   }));
