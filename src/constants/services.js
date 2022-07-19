@@ -21,7 +21,7 @@ export const services = [
       "Phenomenal UI/UX solutions help businesses convert visitors into customers and customers into brand loyalists. We specialize in designing attractive and seamless UI/UX designs that enrich the user experience by including all the latest design principles, technical and strategic considerations and the purpose of the website/software at the core.",
     desc2:
       "When you pick our services, you receive everything you need to fully realize your product from scratch. As the best UI/UX designer, Strydden creates responsive and cross-platform compatible solutions that operate across several platforms, focusing on the key concepts of UI design and functionality execution.",
-    title: "UI /UX",
+    title: "UI / UX",
     path: "/services/ui-ux",
     subServicesList: [
       "User research",
