@@ -32,9 +32,13 @@ export default function ContactText({
         )}
         <Box sx={styles.box}>
           <Text as="span" sx={styles.wrapper.label}>
-            Email
+            Email for info/ business
           </Text>
-          <Text sx={styles.wrapper.value}>{email}</Text>
+          <Text sx={styles.wrapper.value}>{email[0]}</Text>
+          <Text as="span" sx={styles.wrapper.label}>
+            Email for careers
+          </Text>
+          <Text sx={styles.wrapper.value}>{email[1]}</Text>
         </Box>
       </Box>
     </Box>

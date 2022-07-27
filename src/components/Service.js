@@ -114,7 +114,7 @@ const styles = {
       "repeat(1, 1fr)",
       "repeat(1, 1fr)",
       "repeat(2, 1fr)",
-      "repeat(2, 220px)",
+      "repeat(2, 230px)",
     ],
     justifyContent: [null, null, null, "center", "unset"],
     listStyle: "none",
@@ -125,8 +125,10 @@ const styles = {
       gridTemplateColumns: "30px 1fr",
       alignItems: "center",
       textAlign: "left",
+      width: "max-content",
       py: 1,
     },
+    
     "li > p": {
       fontSize: [0, 1, null, 2, "15px", 2],
       fontWeight: 500,

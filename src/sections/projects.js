@@ -101,13 +101,14 @@ const styles = {
     },
   },
   carouselBtns: {
-    display: ["flex", null, null, null, null, "none"],
+    display: ["flex", null, null, null, null],
     justifyContent: "center",
     alignItems: "center",
     button: {
       border: "none",
       outline: "none",
       backgroundColor: "transparent",
+      cursor: "pointer",
       fontSize: [2, null, 4, null, 5],
       color: "#BBC7D7",
       width: "auto",

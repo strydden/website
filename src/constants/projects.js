@@ -14,7 +14,7 @@ export const projects = [
     path: "/projects/travalab-web-app",
     externalLink1: "https://travalab.com/",
     technologyList: [
-      "Ruby on Rails",
+      "Ruby On Rails",
       "Webpacker",
       "Javascript/JQuery",
       "PostgreSQL",
@@ -65,7 +65,7 @@ export const projects = [
     externalLink1: "https://www.unitedwrestlingclub.com",
     technologyList: [
       "React",
-      "RoR",
+      "Ruby On Rails",
       "Ruby",
       "AWS",
       "API Integration",

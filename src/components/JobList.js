@@ -8,7 +8,7 @@ const JobList = ({items}) => {
         
         {
             items.map((item,index) => (
-                <Link href="/career/demo" key={item.id}>
+                <Link href={item.routingPath} key={item.id}>
                     <a>
                         <JobBox key={item.id} title={item.title} contentHeader={item.contentHeader} isOpen={item.isOpen}/>
                     </a>
