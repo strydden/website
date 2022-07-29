@@ -7,7 +7,7 @@ const Requirements = ({requirements}) => {
         <h2 className={styles.head}>
             requirements
         </h2>
-        <ul>
+        <ul className={styles.list}>
             {
                 requirements.map((item,index) => (
                     <li key={index} className={styles.summary}>{item}</li>

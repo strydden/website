@@ -6,7 +6,7 @@ const JobResponsibilities = ({responsibilities}) => {
         <h2 className={styles.head}>
             responsibilities
         </h2>
-        <ul>
+        <ul className={styles.list}>
             {
                 responsibilities.map((item,index) => (
                     <li key={index} className={styles.summary}>{item}</li>

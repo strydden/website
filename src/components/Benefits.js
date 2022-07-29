@@ -7,7 +7,7 @@ const Benefits = ({benefits}) => {
         <h2 className={styles.head}>
             benefits & perks
         </h2>
-        <ul>
+        <ul className={styles.list}>
             {
                 benefits.map((item,index) => (
                     <li key={index} className={styles.summary}>{item}</li>
