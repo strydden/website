@@ -36,18 +36,7 @@ const data = {
                     building your own skill set.
                 `
                 ,
-    responsibilities: [
-        `1+ years of production experience with React JS 
-        (and/or other modern frameworks- Angular JS, Vue JS)
-        `,
-        `Solve complex technical problems`,
-        `Work with stakeholders to discuss and gather requirements`,
-        `Verify and deploy application`,
-        `Reveiw the code of other people`,
-        `Participate in architacture discussion and design reviews.`,
-        `Optimize the application for scalability and performance.`,
-        `Improve internal documentation and reference books.`
-    ],
+    
     requirements: [
         `1+ years of production experience with React JS 
         (and/or other modern frameworks- Angular JS, Vue JS).
