@@ -1,28 +1,34 @@
-import { FaFacebook, FaTwitter, FaGithub, FaInstagram } from "react-icons/fa";
+import { FaFacebookSquare, FaTwitter, FaYoutube, FaInstagram, FaLinkedin } from "react-icons/fa";
 
 export default [
   {
-    path: "/",
+    path: "https://www.facebook.com/strydden",
     label: "Facebook",
     name: "facebook",
-    icon: <FaFacebook />,
+    icon: <FaFacebookSquare />,
   },
   {
-    path: "/",
+    path: "https://twitter.com/strydden",
     label: "Twitter",
     name: "twitter",
     icon: <FaTwitter />,
   },
   {
-    path: "/",
-    label: "Github",
-    name: "github",
-    icon: <FaGithub />,
+    path: "https://www.youtube.com/channel/UCtpljSU-5-vig9A5HKrvr1A",
+    label: "Youtube",
+    name: "youtube",
+    icon: <FaYoutube />,
   },
   {
-    path: "/",
+    path: "https://www.instagram.com/strydden/",
     label: "Instagram",
     name: "instagram",
     icon: <FaInstagram />,
+  },
+  {
+    path: "https://www.linkedin.com/company/strydden/",
+    label: "Linkedin",
+    name: "linkedin",
+    icon: <FaLinkedin />,
   },
 ];

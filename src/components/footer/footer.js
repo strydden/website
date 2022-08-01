@@ -2,7 +2,6 @@
 import { jsx, Box, Text, Flex, Container } from "theme-ui";
 import { Link } from "components/link";
 import menuItems from "./footer.data";
-import CallToAction from "sections/call-to-action";
 export default function Footer() {
   return (
     <Box as="footer" sx={styles.footer}>
@@ -43,7 +42,18 @@ export default function Footer() {
               Strydden Technologies LLP
             </Text>
           </Flex>
-          {/* <Flex as="ul" sx={styles.footerNav}>
+          <Flex as="ul" sx={styles.footerNav}>
+            <Text
+              as="span"
+              sx={{
+                fontWeight: "medium",
+                textTransform: "uppercase",
+                marginRight: "20px",
+                fontSize: "12px",
+              }}
+            >
+              Follow us:
+            </Text>
             {menuItems?.map((item, index) => (
               <li key={index}>
                 <a
@@ -55,11 +65,10 @@ export default function Footer() {
                   rel="noreferrer"
                 >
                   {item?.icon}
-                  {item?.label}
                 </a>
               </li>
             ))}
-          </Flex> */}
+          </Flex>
         </Flex>
       </Container>
     </Box>
@@ -74,7 +83,7 @@ const styles = {
   },
   footerInner: {
     alignItems: "center",
-    justifyContent: "center",
+    justifyContent: "space-around",
     flexDirection: ["column", null, null, null, "row"],
   },
   brand: {
@@ -115,25 +124,28 @@ const styles = {
         flexDirection: ["column", "row", "row", "row", "row"],
         cursor: "pointer",
         textDecoration: "none",
+        transition: "0.2s",
         fontSize: [1, null, null, 2],
         "&.facebook > svg": {
-          color: "#3B5998",
+          color: "var(--theme-ui-colors-primary,#223266)",
         },
         "&.twitter > svg": {
-          color: "#55ACEE",
+          color: "var(--theme-ui-colors-primary,#223266)",
         },
         "&.github > svg": {
-          color: "#161614",
+          color: "var(--theme-ui-colors-primary,#223266)",
         },
         ":hover": {
           color: "primary",
+          transform: "scale(1.1)",
         },
         ":last-child": {
           mb: "0px",
         },
       },
       svg: {
-        width: "17px",
+        width: "18px",
+        height: "18px",
         mr: 2,
         fontSize: 2,
         flexShrink: 0,
