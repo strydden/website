@@ -19,7 +19,7 @@ const data = {
               Opp. Shivalik Plaza, IIM Road, Panjarapole
               Ahmedabad, Gujarat 380009, India`,
   mobile: "+91-9888888888",
-  email: ["info@strydden.com","careers@strydden.com"]
+  email: ["info@strydden.com", "careers@strydden.com"],
 };
 
 const Contact = () => {
@@ -52,7 +52,7 @@ const Contact = () => {
   return (
     <Box id="contact" as="section" sx={styles.workflow}>
       <Container sx={styles.containerBox}>
-      <Box sx={styles.contentBox}>
+        <Box sx={styles.contentBox}>
           <ContactText
             title={data.title}
             address={data.address}

@@ -124,6 +124,7 @@ const styles = {
       display: "grid",
       gridTemplateColumns: "30px 1fr",
       alignItems: "center",
+      width: "max-content",
       textAlign: "left",
       width: "max-content",
       py: 1,
