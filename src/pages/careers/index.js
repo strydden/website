@@ -2,24 +2,24 @@
 import { jsx, Container, Text } from "theme-ui";
 import Layout from "components/layout";
 import PageTitle from "components/PageTitle";
-import Accordion from "components/accordion/accordion";
 import JobList from "components/JobList";
 const data = [
   {
     id: 1,
     title: `React JS Engineer`,
-    contentHeader: "Remote, India/Pune | Full time /Part time | 1+ years of Experience",
+    contentHeader:
+      "Remote, India/Pune | Full Time / Part Time | 1+ Years of Experience",
     isOpen: true,
-    routingPath: "/careers/react"
+    routingPath: "/careers/react",
   },
   {
     id: 2,
     title: `Ruby On Rails Engineer`,
-    contentHeader: "Remote, India/Pune | Full time /Part time | 1+ years of Experience",
+    contentHeader:
+      "Remote, India/Pune | Full Time / Part Time | 1+ Years of Experience",
     isOpen: true,
-    routingPath: "/careers/ror"
-  }
-  
+    routingPath: "/careers/ruby-on-rails",
+  },
 ];
 
 const Careers = () => {
@@ -34,7 +34,7 @@ const Careers = () => {
           sx={{
             fontSize: [4, 5, 6, null, 7],
             color: "heading",
-            textAlign:"center",
+            textAlign: "center",
             fontFamily: "heading",
             fontWeight: "body",
             letterSpacing: "heading",
@@ -43,7 +43,7 @@ const Careers = () => {
         >
           Job Positions
         </Text>
-        <JobList items={data}/>
+        <JobList items={data} />
       </Container>
     </Layout>
   );

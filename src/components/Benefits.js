@@ -1,20 +1,18 @@
-import styles from '../../styles/description.module.css'
+import styles from "../../styles/description.module.css";
 
-const Benefits = ({benefits}) => {
-
-    
-    return <div className={styles.container}>
-        <h2 className={styles.head}>
-            benefits & perks
-        </h2>
-        <ul className={styles.list}>
-            {
-                benefits.map((item,index) => (
-                    <li key={index} className={styles.summary}>{item}</li>
-                ))
-            }
-        </ul>
+const Benefits = ({ benefits }) => {
+  return (
+    <div className={styles.container}>
+      <h2 className={styles.head}>benefits & perks</h2>
+      <ul className={styles.list}>
+        {benefits.map((item, index) => (
+          <li key={index} className={styles.summary}>
+            {item}
+          </li>
+        ))}
+      </ul>
     </div>
-}
+  );
+};
 
-export default Benefits
+export default Benefits;
