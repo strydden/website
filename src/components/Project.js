@@ -121,6 +121,7 @@ const styles = {
     img: {
       mt: ["2rem", "2rem", "2rem", null, null, null],
       maxWidth: ["100%", null, null, "450px", "450px", "450px"],
+
     },
   },
   content: {

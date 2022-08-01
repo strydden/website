@@ -1,0 +1,14 @@
+
+.container{
+        margin: 0 7rem;
+}
+
+@media screen and (max-width:668px) {
+    .container{
+        margin: 0 0.5rem;
+    }
+}
+.container a{
+    text-decoration: none;
+    color: #223266;
+}

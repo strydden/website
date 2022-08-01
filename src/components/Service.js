@@ -126,8 +126,10 @@ const styles = {
       alignItems: "center",
       width: "max-content",
       textAlign: "left",
+      width: "max-content",
       py: 1,
     },
+    
     "li > p": {
       fontSize: [0, 1, null, 2, "15px", 2],
       fontWeight: 500,

@@ -19,7 +19,7 @@ const data = {
               Opp. Shivalik Plaza, IIM Road, Panjarapole
               Ahmedabad, Gujarat 380009, India`,
   mobile: "+91-9888888888",
-  email: ["info@strydden.com","careers@strydden.com"],
+  email: ["info@strydden.com", "careers@strydden.com"],
 };
 
 const Contact = () => {
@@ -167,7 +167,6 @@ const styles = {
   },
   formBox: {
     margin: "0 2vw",
-   
   },
   thumbnail: {
     display: "flex",
