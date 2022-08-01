@@ -6,7 +6,7 @@ import Requirements from "components/Requirements";
 import Benefits from "components/Benefits";
 import ApplyButton from "components/ApplyButton";
 
-const React = () => {
+const index = () => {
   return (
     <Layout>
       <Container>
@@ -63,4 +63,4 @@ const data = {
   ],
 };
 
-export default React;
+export default index;

@@ -2,12 +2,11 @@ import Layout from "components/layout";
 import { Container } from "theme-ui";
 import PageTitle from "components/PageTitle";
 import JobSummary from "components/JobSummary";
-import JobResponsibilities from "components/JobResponsibilities";
 import Requirements from "components/Requirements";
 import Benefits from "components/Benefits";
 import ApplyButton from "components/ApplyButton";
 
-const RubyOnRail = () => {
+const index = () => {
   return (
     <Layout>
       <Container>
@@ -53,4 +52,4 @@ const data = {
   ],
 };
 
-export default RubyOnRails;
+export default index;
