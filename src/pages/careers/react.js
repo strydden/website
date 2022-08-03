@@ -32,11 +32,11 @@ const data = {
                     building your own skill set.
                 `,
   requirements: [
-    `1+ years of production experience with React JS 
+    `2+ years of production experience with React JS 
         (and/or other modern frameworks- Angular JS, Vue JS).
         `,
     `Experienced with associated tooling (Redux, Jest, Webpack, Babel, Enzyme, Cypress).`,
-    `1+ years of experience of JavaScript(and preferably TypeScript) including asynchronous 
+    `2+ years of experience of JavaScript(and preferably TypeScript) including asynchronous 
         programming, closures, types and ES6/ES7.`,
     `Thorough understanding of React JS and its core principles including Virtual DOM
         Data Binding, State and Props and React Lifecycle and Redux Middleware such as 

@@ -132,7 +132,14 @@ const styles = {
         "&.twitter > svg": {
           color: "var(--theme-ui-colors-primary,#223266)",
         },
-        "&.github > svg": {
+        
+        "&.youtube > svg": {
+          color: "var(--theme-ui-colors-primary,#223266)",
+        },
+        "&.instagram > svg": {
+          color: "var(--theme-ui-colors-primary,#223266)",
+        },
+        "&.linkedin > svg": {
           color: "var(--theme-ui-colors-primary,#223266)",
         },
         ":hover": {
