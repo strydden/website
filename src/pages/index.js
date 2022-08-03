@@ -27,7 +27,7 @@ export async function getStaticProps() {
 export default function IndexPage() {
   return (
     <Layout>
-      <SEO title="STRYDDEN Technologies LLP" />
+      <SEO title="Strydden Technologies LLP" />
       <Banner />
       <Services />
       <Technology />

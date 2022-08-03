@@ -3,9 +3,9 @@ import Head from "next/head";
 
 export default function SEO({
   description = "Where Business vision meets top notch IT Services",
-  author = "STRYDDEN",
+  author = "Strydden",
   meta,
-  title = "STRYDDEN Technologies LLP",
+  title = "Strydden Technologies LLP",
   image = "https://www.strydden.com/seo-image.png",
 }) {
   const metaData = [
