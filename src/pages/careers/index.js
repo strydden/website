@@ -16,7 +16,7 @@ const data = [
     id: 2,
     title: `Ruby On Rails Engineer`,
     contentHeader:
-      "Remote, India/Pune | Full Time / Part Time | 1+ Years of Experience",
+      "Remote, India/Pune | Full Time / Part Time | 2+ Years of Experience",
     isOpen: true,
     routingPath: "/careers/ruby-on-rails",
   },
