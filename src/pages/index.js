@@ -7,32 +7,15 @@ import Projects from "sections/projects";
 import Contact from "sections/contact";
 import Technology from "sections/technology";
 
-const { BLOG_URL, CONTENT_API_KEY } = process.env;
-
-async function getPosts() {
-  const result = await fetch(
-    `${BLOG_URL}/ghost/api/v3/content/posts/?key=${CONTENT_API_KEY}`
-  ).then((res) => res.json());
-  return result.posts;
-}
-
-export async function getStaticProps() {
-  const posts = await getPosts();
-  return {
-    props: { posts },
-    revalidate: 1,
-  };
-}
-
 export default function IndexPage() {
-  return (
-    <Layout>
-      <SEO title="Strydden Technologies LLP" />
-      <Banner />
-      <Services />
-      <Technology />
-      <Projects />
-      <Contact />
-    </Layout>
-  );
+    return (
+        <Layout>
+            <SEO title="Strydden Technologies LLP" />
+            <Banner />
+            <Services />
+            <Technology />
+            <Projects />
+            <Contact />
+        </Layout>
+    );
 }
