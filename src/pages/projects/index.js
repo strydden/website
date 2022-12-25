@@ -16,14 +16,16 @@ const Projects = () => {
         data={projects[0]}
         backgroundColor="backgroundSecondary"
         flexDirection="row"
+        technologies={true}
       />
-      <Project data={projects[1]} flexDirection="row-reverse" />
+      <Project data={projects[1]} flexDirection="row-reverse" technologies={true}/>
       <Project
         data={projects[2]}
         backgroundColor="backgroundSecondary"
         flexDirection="row"
+        technologies={true}
       />
-      <Project data={projects[3]} flexDirection="row-reverse" />
+      <Project data={projects[3]} flexDirection="row-reverse" technologies={true}/>
     </Layout>
   );
 };

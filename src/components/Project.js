@@ -7,7 +7,7 @@ import { Link } from "./link";
 import { keyframes } from "@emotion/react";
 import { projects } from "constants/projects";
 
-const Project = ({ data, backgroundColor, flexDirection }) => {
+const Project = ({ data, backgroundColor, flexDirection, technologies}) => {
   return (
     <Box
       as="section"
@@ -75,9 +75,11 @@ const Project = ({ data, backgroundColor, flexDirection }) => {
               )}
             </Box>
             <Box sx={styles.technologyBox}>
-              <Text as="p" sx={styles.technologyText}>
+              {
+                technologies && <Text as="p" sx={styles.technologyText}>
                 Technologies
               </Text>
+              }
               {data.technologyList && (
                 <Grid sx={styles.list} as="ul">
                   {data.technologyList.map((item, i) => (
