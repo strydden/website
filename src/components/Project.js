@@ -6,6 +6,9 @@ import Image from "components/image";
 import { Link } from "./link";
 import { keyframes } from "@emotion/react";
 import { projects } from "constants/projects";
+import VisitWebsiteIcon from "assets/visit-website.svg";
+import GooglePlayStoreIcon from "assets/google-play-badge.png";
+import AppStoreIcon from "assets/download-on-the-app-store.svg";
 
 const Project = ({ data, backgroundColor, flexDirection, technologies }) => {
     return (
@@ -63,8 +66,18 @@ const Project = ({ data, backgroundColor, flexDirection, technologies }) => {
                                     target="_blank"
                                     sx={styles.linkLabel}
                                 >
-                                    Visit
-                                    <IoIosArrowForward size="16px" />
+                                    <Image
+                                        src={VisitWebsiteIcon}
+                                        sx={{
+                                            width: [
+                                                "100px",
+                                                "100px",
+                                                "100px",
+                                                "140px",
+                                                "140px",
+                                            ],
+                                        }}
+                                    />
                                 </Link>
                             )}
                             {data.playStoreLink && (
@@ -75,8 +88,18 @@ const Project = ({ data, backgroundColor, flexDirection, technologies }) => {
                                     target="_blank"
                                     sx={styles.linkLabel}
                                 >
-                                    View Android
-                                    <IoIosArrowForward size="16px" />
+                                    <Image
+                                        src={GooglePlayStoreIcon}
+                                        sx={{
+                                            width: [
+                                                "108px",
+                                                "108px",
+                                                "108px",
+                                                "151px",
+                                                "151px",
+                                            ],
+                                        }}
+                                    />
                                 </Link>
                             )}
                             {data.appStoreLink && (
@@ -87,8 +110,18 @@ const Project = ({ data, backgroundColor, flexDirection, technologies }) => {
                                     target="_blank"
                                     sx={styles.linkLabel}
                                 >
-                                    View iOS
-                                    <IoIosArrowForward size="16px" />
+                                    <Image
+                                        src={AppStoreIcon}
+                                        sx={{
+                                            width: [
+                                                "103px",
+                                                "103px",
+                                                "103px",
+                                                "137px",
+                                                "137px",
+                                            ],
+                                        }}
+                                    />
                                 </Link>
                             )}
                         </Box>
@@ -232,7 +265,7 @@ const styles = {
     },
     externalLinks: {
         display: "flex",
-        mt: "0.5rem",
+        mt: "1.5rem",
         "a:not(:last-child)": {
             mr: "1rem",
         },
