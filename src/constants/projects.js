@@ -30,9 +30,6 @@ export const projects = [
         desc2: "",
         title: "Travalab Mobile App",
         path: "/projects/travalab-mobile-app",
-        playStoreLink:
-            "https://play.google.com/store/apps/details?id=com.dev.tundra",
-        appStoreLink: "https://apps.apple.com/us/app/travalab/id1537142611",
         technologyList: ["Flutter", "AWS SNS"],
     },
     {
