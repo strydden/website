@@ -12,6 +12,10 @@ export default [
     label: "Projects",
   },
   {
+    path: "/games",
+    label: "Games",
+  },
+  {
     path: "/about",
     label: "About",
   },
