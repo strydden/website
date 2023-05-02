@@ -73,7 +73,7 @@ export const projects = [
         desc2: "",
         title: "Masjid Muhajireen",
         path: "/projects/masjid-muhajireen",
-        externalLink1: "https://www.masjidmuhajireen.org/",
+        websiteLink: "https://www.masjidmuhajireen.org/",
         technologyList: ["NextJS", "AWS", "Payment Gateway"],
     },
 ];
