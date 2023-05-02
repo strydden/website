@@ -12,7 +12,7 @@ export const projects = [
         desc2: "",
         title: "Travalab Web App",
         path: "/projects/travalab-web-app",
-        externalLink1: "https://travalab.com/",
+        websiteLink: "https://travalab.com/",
         technologyList: [
             "Ruby On Rails",
             "Webpacker",
@@ -31,9 +31,6 @@ export const projects = [
         desc2: "",
         title: "Travalab Mobile App",
         path: "/projects/travalab-mobile-app",
-        externalLink1:
-            "https://play.google.com/store/apps/details?id=com.dev.tundra",
-        externalLink2: "https://apps.apple.com/us/app/travalab/id1537142611",
         technologyList: ["Flutter", "AWS SNS"],
     },
     {
@@ -59,7 +56,7 @@ export const projects = [
         desc2: "",
         title: "United Wrestling Club",
         path: "/projects/united-wrestling-club",
-        externalLink1: "https://www.unitedwrestlingclub.com",
+        websiteLink: "https://www.unitedwrestlingclub.com",
         technologyList: [
             "React",
             "Ruby On Rails",
