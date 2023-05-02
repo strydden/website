@@ -2,6 +2,7 @@ import travalabWeb from "assets/travalabWeb.png";
 import travalabApp from "assets/travalabApp.png";
 import qrcty from "assets/qrcty.png";
 import uwc from "assets/uwc.png";
+import masjid from "assets/masjid-muhajireen.png";
 
 export const projects = [
     {
@@ -64,5 +65,15 @@ export const projects = [
             "API Integration",
             "Payment Gateway",
         ],
+    },
+    {
+        homeImage: masjid,
+        projectsImage: masjid,
+        desc1: "Masjid Muhajireen is a non-profit organization founded in 1992 with ongoing commitments to the Bay Area community for over 30 years.",
+        desc2: "",
+        title: "Masjid Muhajireen",
+        path: "/projects/masjid-muhajireen",
+        websiteLink: "https://www.masjidmuhajireen.org/",
+        technologyList: ["NextJS", "AWS", "Payment Gateway"],
     },
 ];
